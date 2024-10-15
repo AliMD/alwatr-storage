@@ -25,6 +25,26 @@
       "types": "./dist/main.d.ts",
       "import": "./dist/main.mjs",
       "require": "./dist/main.cjs"
+    },
+    "./types": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.cjs"
+    },
+    "./engine": {
+      "types": "./dist/engine.d.ts",
+      "import": "./dist/engine.mjs",
+      "require": "./dist/engine.cjs"
+    },
+    "./reference": {
+      "types": "./dist/reference.d.ts",
+      "import": "./dist/reference.mjs",
+      "require": "./dist/reference.cjs"
+    },
+    "./helper": {
+      "types": "./dist/helper.d.ts",
+      "import": "./dist/helper.mjs",
+      "require": "./dist/helper.cjs"
     }
   },
   "license": "AGPL-3.0-only",
