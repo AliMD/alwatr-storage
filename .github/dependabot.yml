@@ -5,6 +5,9 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     open-pull-requests-limit: 20
+    commit-message:
+      prefix: deps
+      include: scope
     reviewers:
       - AliMD
     schedule:
@@ -24,6 +27,9 @@ updates:
     directory: /
     versioning-strategy: increase
     open-pull-requests-limit: 20
+    commit-message:
+      prefix: deps
+      include: scope
     reviewers:
       - AliMD
     schedule:
@@ -36,20 +42,27 @@ updates:
       - priority-low
       - maintenance
     groups:
-      production-dependencies:
-        dependency-type: 'production'
+      dependencies:
         exclude-patterns:
           - '@alwatr/*'
-          - 'fract'
-      development-dependencies:
-        dependency-type: 'development'
-        exclude-patterns:
-          - '@alwatr/*'
-          - 'fract'
-      alwatr-dependencies:
+          - 'alwatr'
+      alwatr:
         patterns:
           - '@alwatr/*'
-          - 'fract'
+          - 'alwatr'
+    ignore:
+      - dependency-name: "eslint"
+        update-types:
+          - version-update:semver-major
+      - dependency-name: "@typescript-eslint/eslint-plugin"
+        update-types:
+          - version-update:semver-major
+      - dependency-name: "@typescript-eslint/parser"
+        update-types:
+          - version-update:semver-major
+      - dependency-name: "conventional-changelog-conventionalcommits"
+        update-types:
+          - version-update:semver-major
 
   - package-ecosystem: docker
     directory: /packages/nginx
@@ -63,16 +76,8 @@ updates:
       - ci
       - priority-low
       - maintenance
+    ignore:
+      - dependency-name: "alwatr/node"
+        update-types:
+          - version-update:semver-major
 
-  # - package-ecosystem: docker
-  #   directory: /packages/api
-  #   reviewers:
-  #     - AliMD
-  #   schedule:
-  #     interval: weekly
-  #     time: '00:30'
-  #     day: 'thursday'
-  #   labels:
-  #     - ci
-  #     - priority-low
-  #     - maintenance
