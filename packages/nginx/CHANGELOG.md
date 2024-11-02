@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.1](https://github.com/Alwatr/nitrobase/compare/v7.3.0...v7.3.1) (2024-11-02)
+
+### Miscellaneous Chores
+
+* **deps:** bump alwatr/nginx-json in /packages/nginx ([6b965bc](https://github.com/Alwatr/nitrobase/commit/6b965bc0426be815c3c5d38296d798bbdb2b4f60)) by @dependabot[bot]
+* **Dockerfile:** update label version ([9b59694](https://github.com/Alwatr/nitrobase/commit/9b596946662766c90b7b816359401f47252c0f85)) by @AliMD
+
 ## [7.2.1](https://github.com/Alwatr/nitrobase/compare/v7.2.0...v7.2.1) (2024-09-29)
 
 ### Miscellaneous Chores

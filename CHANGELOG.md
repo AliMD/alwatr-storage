@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.1](https://github.com/Alwatr/nitrobase/compare/v7.3.0...v7.3.1) (2024-11-02)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the development-dependencies group with 8 updates ([63f7adc](https://github.com/Alwatr/nitrobase/commit/63f7adc5ff83d4876f34d4f089a4be9b95b711a6)) by @dependabot[bot]
+* **deps:** bump alwatr/nginx-json in /packages/nginx ([6b965bc](https://github.com/Alwatr/nitrobase/commit/6b965bc0426be815c3c5d38296d798bbdb2b4f60)) by @dependabot[bot]
+* **deps:** bump github/codeql-action in the github-actions group ([b84174a](https://github.com/Alwatr/nitrobase/commit/b84174a54ff5873879ee612dd26e62a261a39e47)) by @dependabot[bot]
+* **deps:** bump the alwatr-dependencies group with 2 updates ([20fb436](https://github.com/Alwatr/nitrobase/commit/20fb436b9f146d5ec7452a693c7af8faa32bedff)) by @dependabot[bot]
+* **deps:** bump the github-actions group across 1 directory with 5 updates ([efff4e2](https://github.com/Alwatr/nitrobase/commit/efff4e2164f2ad38c6b3c1735e287569e7495195)) by @dependabot[bot]
+* **Dockerfile:** update label version ([9b59694](https://github.com/Alwatr/nitrobase/commit/9b596946662766c90b7b816359401f47252c0f85)) by @AliMD
+* **vscode:** add copilot instructions and update extension recommendations ([17c4b25](https://github.com/Alwatr/nitrobase/commit/17c4b25ad687f0b6433f3b76d2a83a568554c55a)) by @AliMD
+
+### Dependencies update
+
+* **deps-dev:** bump @types/node in the dependencies group ([dd3e94a](https://github.com/Alwatr/nitrobase/commit/dd3e94a4c007da8fddda4cfeffe5f0763d74952e)) by @dependabot[bot]
+* **deps:** bump the alwatr group with 6 updates ([eb9eeb1](https://github.com/Alwatr/nitrobase/commit/eb9eeb1901f7947cde783bf6f06340c984d6f59d)) by @dependabot[bot]
+* update ([134465f](https://github.com/Alwatr/nitrobase/commit/134465f82e776dc44468b1b1f3861be16c16f35d)) by @
+* update dependabot configuration for improved dependency management ([3182ec0](https://github.com/Alwatr/nitrobase/commit/3182ec040f7ef668cc0b7982894d71b5daccd6da)) by @AliMD
+
 ## [7.3.0](https://github.com/Alwatr/nitrobase/compare/v7.2.1...v7.3.0) (2024-10-11)
 
 ### Features

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.1](https://github.com/Alwatr/nitrobase/compare/v7.3.0...v7.3.1) (2024-11-02)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the development-dependencies group with 8 updates ([63f7adc](https://github.com/Alwatr/nitrobase/commit/63f7adc5ff83d4876f34d4f089a4be9b95b711a6)) by @dependabot[bot]
+* **deps:** bump the alwatr-dependencies group with 2 updates ([20fb436](https://github.com/Alwatr/nitrobase/commit/20fb436b9f146d5ec7452a693c7af8faa32bedff)) by @dependabot[bot]
+
+### Dependencies update
+
+* **deps-dev:** bump @types/node in the dependencies group ([dd3e94a](https://github.com/Alwatr/nitrobase/commit/dd3e94a4c007da8fddda4cfeffe5f0763d74952e)) by @dependabot[bot]
+* **deps:** bump the alwatr group with 6 updates ([eb9eeb1](https://github.com/Alwatr/nitrobase/commit/eb9eeb1901f7947cde783bf6f06340c984d6f59d)) by @dependabot[bot]
+
 ## [7.3.0](https://github.com/Alwatr/nitrobase/compare/v7.2.1...v7.3.0) (2024-10-11)
 
 ### Features
