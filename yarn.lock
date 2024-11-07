@@ -81,9 +81,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/fetch@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@alwatr/fetch@npm:5.0.0"
+"@alwatr/fetch@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@alwatr/fetch@npm:5.2.0"
   dependencies:
     "@alwatr/delay": "npm:^5.0.0"
     "@alwatr/global-this": "npm:^5.0.0"
@@ -91,7 +91,7 @@ __metadata:
     "@alwatr/logger": "npm:^5.0.0"
     "@alwatr/package-tracer": "npm:^5.0.0"
     "@alwatr/parse-duration": "npm:^5.0.0"
-  checksum: 10c0/211c3b1a54d2bff7f5ea82199d2f1cdc7dd474267bded07a9666ac84e3e02160481a3bbeb0f81c6379d79eae2fc400cb8457f170f7565474d75c60dc655fd476
+  checksum: 10c0/f534c80abc126b214446c6e04bf4fbe328c503f1550488b6d2aa9878442792238017f0299a0a269892c3f781ec9963ea115f9ac8c50c01b2f462bead95474511
   languageName: node
   linkType: hard
 
@@ -170,9 +170,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/nanolib@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@alwatr/nanolib@npm:5.0.0"
+"@alwatr/nanolib@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@alwatr/nanolib@npm:5.2.0"
   dependencies:
     "@alwatr/async-queue": "npm:^5.0.0"
     "@alwatr/dedupe": "npm:^5.0.0"
@@ -180,7 +180,7 @@ __metadata:
     "@alwatr/delay": "npm:^5.0.0"
     "@alwatr/env": "npm:^5.0.0"
     "@alwatr/exit-hook": "npm:^5.0.0"
-    "@alwatr/fetch": "npm:^5.0.0"
+    "@alwatr/fetch": "npm:^5.2.0"
     "@alwatr/flat-string": "npm:^5.0.0"
     "@alwatr/flatomise": "npm:^5.0.0"
     "@alwatr/global-this": "npm:^5.0.0"
@@ -188,14 +188,14 @@ __metadata:
     "@alwatr/is-number": "npm:^5.0.0"
     "@alwatr/local-storage": "npm:^5.0.0"
     "@alwatr/logger": "npm:^5.0.0"
-    "@alwatr/node-fs": "npm:^5.0.0"
+    "@alwatr/node-fs": "npm:^5.1.0"
     "@alwatr/package-tracer": "npm:^5.0.0"
     "@alwatr/parse-duration": "npm:^5.0.0"
     "@alwatr/platform-info": "npm:^5.0.0"
     "@alwatr/render-state": "npm:^5.0.0"
     "@alwatr/resolve-url": "npm:^5.0.0"
     "@alwatr/unicode-digits": "npm:^5.0.0"
-  checksum: 10c0/8b31422f988db366d33c36b5dafa5c8587022d4980a6dff2551f9fcfff9dc20c45a90fa93a0486f7565da7ef5fae4fca322d30eaa868d404ecadbf1e7667340c
+  checksum: 10c0/530deb885d630b37dbdc3f2f62bdb018108ef2b9c6074cbcb263ba0c9151634988208c78820f4ed54e521e0ee29396f97151e8b9ecfb062a23c1e50f12301e52
   languageName: node
   linkType: hard
 
@@ -204,7 +204,7 @@ __metadata:
   resolution: "@alwatr/nitrobase-engine@workspace:packages/engine"
   dependencies:
     "@alwatr/nano-build": "npm:^5.0.0"
-    "@alwatr/nanolib": "npm:^5.0.0"
+    "@alwatr/nanolib": "npm:^5.2.0"
     "@alwatr/nitrobase-helper": "workspace:^"
     "@alwatr/nitrobase-reference": "workspace:^"
     "@alwatr/nitrobase-types": "workspace:^"
@@ -221,7 +221,7 @@ __metadata:
   resolution: "@alwatr/nitrobase-helper@workspace:packages/helper"
   dependencies:
     "@alwatr/nano-build": "npm:^5.0.0"
-    "@alwatr/nanolib": "npm:^5.0.0"
+    "@alwatr/nanolib": "npm:^5.2.0"
     "@alwatr/nitrobase-types": "workspace:^"
     "@alwatr/prettier-config": "npm:^5.0.0"
     "@alwatr/tsconfig-base": "npm:^5.0.0"
@@ -242,7 +242,7 @@ __metadata:
   resolution: "@alwatr/nitrobase-reference@workspace:packages/reference"
   dependencies:
     "@alwatr/nano-build": "npm:^5.0.0"
-    "@alwatr/nanolib": "npm:^5.0.0"
+    "@alwatr/nanolib": "npm:^5.2.0"
     "@alwatr/nitrobase-helper": "workspace:^"
     "@alwatr/nitrobase-types": "workspace:^"
     "@alwatr/prettier-config": "npm:^5.0.0"
@@ -258,7 +258,7 @@ __metadata:
   resolution: "@alwatr/nitrobase-types@workspace:packages/types"
   dependencies:
     "@alwatr/nano-build": "npm:^5.0.0"
-    "@alwatr/nanolib": "npm:^5.0.0"
+    "@alwatr/nanolib": "npm:^5.2.0"
     "@alwatr/prettier-config": "npm:^5.0.0"
     "@alwatr/tsconfig-base": "npm:^5.0.0"
     "@alwatr/type-helper": "npm:^5.0.0"
@@ -272,7 +272,7 @@ __metadata:
   resolution: "@alwatr/nitrobase@workspace:packages/nitrobase"
   dependencies:
     "@alwatr/nano-build": "npm:^5.0.0"
-    "@alwatr/nanolib": "npm:^5.0.0"
+    "@alwatr/nanolib": "npm:^5.2.0"
     "@alwatr/nitrobase-engine": "workspace:^"
     "@alwatr/nitrobase-helper": "workspace:^"
     "@alwatr/nitrobase-reference": "workspace:^"
@@ -285,15 +285,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@alwatr/node-fs@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@alwatr/node-fs@npm:5.0.0"
+"@alwatr/node-fs@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@alwatr/node-fs@npm:5.1.0"
   dependencies:
     "@alwatr/async-queue": "npm:^5.0.0"
     "@alwatr/flat-string": "npm:^5.0.0"
     "@alwatr/logger": "npm:^5.0.0"
     "@alwatr/package-tracer": "npm:^5.0.0"
-  checksum: 10c0/ea82d3284a8a826bcc636f0ff3e2109def9d41490acbcd3cc461c250df00bc73e733dae8bd4b27da415c40a193ba563b64f81976e4656907b4c3f7f6ecfb2282
+  checksum: 10c0/645ad1c34e5254a36d6b18ce8f687a6107b6212b3e4ca90b5c3bf238e9c37651c7f19b09149ef03fdb845bbe55fbb8459c8272e86b3018e82a3daaabe34351c1
   languageName: node
   linkType: hard
 
