@@ -19,7 +19,12 @@ ENV NGINX_DOCUMENT_ROOT=/data \
     NGINX_EXPIRES_DEFAULT=epoch \
     NGINX_LIMIT_REQ_RATE=400 \
     NGINX_LIMIT_REQ_BURST=1000 \
-    NGINX_DISABLE_SYMLINKS=if_not_owner
+    NGINX_DISABLE_SYMLINKS=if_not_owner \
+    NGINX_CORS_ENABLE="" \
+    NGINX_CORS_ORIGIN="*" \
+    NGINX_CORS_METHODS="GET" \
+    NGINX_CORS_HEADERS="*" \
+    NGINX_CORS_MAXAGE=86400
 
 ENV nitrobaseApiPrefix="/api/s7" \
     nitrobaseDebugPath="/debug-info-110" \
