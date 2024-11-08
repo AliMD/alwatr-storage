@@ -32,9 +32,6 @@ jobs:
           - name: nitrobase-nginx
             path: ./packages/nginx
             context: ./packages/nginx
-          # - name: nitrobase-api
-          #   path: ./packages/api
-          #   context: .
 
     permissions:
       contents: read
