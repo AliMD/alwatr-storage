@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.4.1](https://github.com/Alwatr/nitrobase/compare/v7.4.0...v7.4.1) (2024-11-08)
+
+### Bug Fixes
+
+* **nitrobase:** update build:es script to use module3 preset ([0f5c497](https://github.com/Alwatr/nitrobase/commit/0f5c4974ddf66b9d0de3a0d860f6756a05180491)) by @AliMD
+
 ## [7.4.0](https://github.com/Alwatr/nitrobase/compare/v7.3.1...v7.4.0) (2024-11-08)
 
 ### Features
