@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.4.0](https://github.com/Alwatr/nitrobase/compare/v7.3.1...v7.4.0) (2024-11-08)
+
+### Features
+
+* **nginx:** default CORS configuration ([bb69e47](https://github.com/Alwatr/nitrobase/commit/bb69e47ad14b061b6a0d47653d3fbed2e379ea3e)) by @
+* **nitrobase:** add exports for nitrobase-helper and nitrobase-types in main.ts ([865fcc8](https://github.com/Alwatr/nitrobase/commit/865fcc89f880448fc2ce89ce576ee912c68ab5b4)) by @
+
+### Code Refactoring
+
+* **nitrobase:** rename helper.ts to client.ts and update exports ([c328892](https://github.com/Alwatr/nitrobase/commit/c3288925ed7f30885cd309390767c7865b8c0cee)) by @
+* **nitrobase:** separate `export`s based on the `package`s name ([4b1f241](https://github.com/Alwatr/nitrobase/commit/4b1f24139aceda18b7a593007077652f642bb462)) by @mohammadhonarvar
+* **nitrobase:** update `exports` & remove extra files ([c406705](https://github.com/Alwatr/nitrobase/commit/c40670587b16bbf81e5e2449be30578054abbfbe)) by @mohammadhonarvar
+
+### Miscellaneous Chores
+
+* **deps:** bump alwatr/nginx-json in /packages/nginx ([f86339f](https://github.com/Alwatr/nitrobase/commit/f86339ffdcbd52c06885be6b1b10c54bd823b419)) by @dependabot[bot]
+* **dockerfile:** update label version ([f25eb3b](https://github.com/Alwatr/nitrobase/commit/f25eb3b04b1646eddcf75d15e4f38834ef57ac7e)) by @AliMD
+* **workflow:** remove commented-out nitrobase-api job from publish-container.yml ([0c65d33](https://github.com/Alwatr/nitrobase/commit/0c65d33f6c3dcd0d319091ed48e89a742861ec72)) by @
+
+### Dependencies update
+
+* bump @alwatr/nanolib from 5.2.0 to 5.2.1 across multiple packages ([e1f87b0](https://github.com/Alwatr/nitrobase/commit/e1f87b07d33e8227440256a70f012aa63410f153)) by @
+* **deps-dev:** bump @types/node in the dependencies group ([67ffbad](https://github.com/Alwatr/nitrobase/commit/67ffbad06c95c304d47acbe46fd137fb4cf69f95)) by @dependabot[bot]
+* **deps:** bump @alwatr/nanolib from 5.0.0 to 5.2.0 in the alwatr group ([dfa1eef](https://github.com/Alwatr/nitrobase/commit/dfa1eefb191bbaac2ff2fff410bb1d3ec615d959)) by @dependabot[bot]
+
 ## [7.3.1](https://github.com/Alwatr/nitrobase/compare/v7.3.0...v7.3.1) (2024-11-02)
 
 ### Miscellaneous Chores

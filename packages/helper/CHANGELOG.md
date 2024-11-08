@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.4.0](https://github.com/Alwatr/nitrobase/compare/v7.3.1...v7.4.0) (2024-11-08)
+
+### Dependencies update
+
+* bump @alwatr/nanolib from 5.2.0 to 5.2.1 across multiple packages ([e1f87b0](https://github.com/Alwatr/nitrobase/commit/e1f87b07d33e8227440256a70f012aa63410f153)) by @
+* **deps-dev:** bump @types/node in the dependencies group ([67ffbad](https://github.com/Alwatr/nitrobase/commit/67ffbad06c95c304d47acbe46fd137fb4cf69f95)) by @dependabot[bot]
+* **deps:** bump @alwatr/nanolib from 5.0.0 to 5.2.0 in the alwatr group ([dfa1eef](https://github.com/Alwatr/nitrobase/commit/dfa1eefb191bbaac2ff2fff410bb1d3ec615d959)) by @dependabot[bot]
+
 ## [7.3.1](https://github.com/Alwatr/nitrobase/compare/v7.3.0...v7.3.1) (2024-11-02)
 
 ### Miscellaneous Chores

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.4.0](https://github.com/Alwatr/nitrobase/compare/v7.3.1...v7.4.0) (2024-11-08)
+
+### Features
+
+* **nginx:** default CORS configuration ([bb69e47](https://github.com/Alwatr/nitrobase/commit/bb69e47ad14b061b6a0d47653d3fbed2e379ea3e)) by @
+
+### Miscellaneous Chores
+
+* **deps:** bump alwatr/nginx-json in /packages/nginx ([f86339f](https://github.com/Alwatr/nitrobase/commit/f86339ffdcbd52c06885be6b1b10c54bd823b419)) by @dependabot[bot]
+* **dockerfile:** update label version ([f25eb3b](https://github.com/Alwatr/nitrobase/commit/f25eb3b04b1646eddcf75d15e4f38834ef57ac7e)) by @AliMD
+
 ## [7.3.1](https://github.com/Alwatr/nitrobase/compare/v7.3.0...v7.3.1) (2024-11-02)
 
 ### Miscellaneous Chores
