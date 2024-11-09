@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.1](https://github.com/Alwatr/nitrobase/compare/v7.5.0...v7.5.1) (2024-11-09)
+
+### Bug Fixes
+
+* **nginx:** skip return 403 for OPTIONS method in auth configuration ([18a62c3](https://github.com/Alwatr/nitrobase/commit/18a62c3e52c172619ec365526858dc46a5ba3554)) by @
+
 ## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
 
 ### Features
