@@ -8,4 +8,5 @@
     "types": ["node", "@alwatr/nano-build", "@alwatr/type-helper"]
   },
   "include": ["src/**/*.ts"],
+  "references": [{"path": "../types"}, {"path": "../helper"}]
 }
