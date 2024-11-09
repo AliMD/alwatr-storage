@@ -69,7 +69,8 @@
     "@alwatr/nitrobase-engine": "workspace:^",
     "@alwatr/nitrobase-helper": "workspace:^",
     "@alwatr/nitrobase-reference": "workspace:^",
-    "@alwatr/nitrobase-types": "workspace:^"
+    "@alwatr/nitrobase-types": "workspace:^",
+    "@alwatr/nitrobase-user-management": "workspace:^"
   },
   "devDependencies": {
     "@alwatr/nano-build": "^5.0.0",
