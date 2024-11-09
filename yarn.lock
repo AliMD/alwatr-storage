@@ -267,6 +267,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@alwatr/nitrobase-user-management@workspace:^, @alwatr/nitrobase-user-management@workspace:packages/user-management":
+  version: 0.0.0-use.local
+  resolution: "@alwatr/nitrobase-user-management@workspace:packages/user-management"
+  dependencies:
+    "@alwatr/nano-build": "npm:^5.0.0"
+    "@alwatr/nanolib": "npm:^5.2.1"
+    "@alwatr/nitrobase-engine": "workspace:^"
+    "@alwatr/nitrobase-reference": "workspace:^"
+    "@alwatr/nitrobase-types": "workspace:^"
+    "@alwatr/prettier-config": "npm:^5.0.0"
+    "@alwatr/tsconfig-base": "npm:^5.0.0"
+    "@alwatr/type-helper": "npm:^5.0.0"
+    "@types/node": "npm:^22.9.0"
+    typescript: "npm:^5.6.3"
+  languageName: unknown
+  linkType: soft
+
 "@alwatr/nitrobase@workspace:packages/nitrobase":
   version: 0.0.0-use.local
   resolution: "@alwatr/nitrobase@workspace:packages/nitrobase"
@@ -277,6 +294,7 @@ __metadata:
     "@alwatr/nitrobase-helper": "workspace:^"
     "@alwatr/nitrobase-reference": "workspace:^"
     "@alwatr/nitrobase-types": "workspace:^"
+    "@alwatr/nitrobase-user-management": "workspace:^"
     "@alwatr/prettier-config": "npm:^5.0.0"
     "@alwatr/tsconfig-base": "npm:^5.0.0"
     "@alwatr/type-helper": "npm:^5.0.0"

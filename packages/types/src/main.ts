@@ -263,3 +263,8 @@ export type CollectionItem<TData extends JsonObject = JsonObject> = {
  * Collection item context type.
  */
 export type CollectionContext<T extends JsonObject = JsonObject> = StoreFileContext<DictionaryReq<CollectionItem<T>>>;
+
+export type AlwatrAuth = {
+  userId: string;
+  userToken: string;
+};
