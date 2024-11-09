@@ -117,7 +117,7 @@ jobs:
         if: ${{ steps.file_change.outputs.container_folder != 'false' && contains(matrix.name, 'nginx') }}
         run: |
           echo "Running tests for ${{matrix.name}}"
-          docker run --rm ${{env.USER}}/${{matrix.name}}:test /etc/nginx/entrypoint.sh nginx -t
+          docker run --rm -e TEST_MODE=1 ${{env.USER}}/${{matrix.name}}:test /etc/nginx/entrypoint.sh nginx -T -c /etc/nginx/nginx.conf
 
       # TODO: 🧪 Api test
 
