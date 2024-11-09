@@ -8,5 +8,5 @@ if ( $http_authorization ~ ^Alwatr\s+([A-z0-9_=-]+):([A-z0-9_=-]+)$ ) {
 }
 
 if ($userLocation = 0) {
-  return 444;
+  return 403;
 }
