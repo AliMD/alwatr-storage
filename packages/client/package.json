@@ -39,9 +39,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Alwatr/nitrobase",
-    "directory": "packages/nitrobase-client"
+    "directory": "packages/client"
   },
-  "homepage": "https://github.com/Alwatr/nitrobase/tree/next/packages/nitrobase-client#readme",
+  "homepage": "https://github.com/Alwatr/nitrobase/tree/next/packages/client#readme",
   "bugs": {
     "url": "https://github.com/Alwatr/nitrobase/issues"
   },
