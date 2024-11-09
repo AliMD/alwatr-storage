@@ -1,7 +1,7 @@
 {
   "name": "@alwatr/nitrobase-user-management",
   "version": "7.4.0",
-  "description": "",
+  "description": "User management module for Nitrobase, providing user creation, authentication, and data management capabilities.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "keywords": [
     "user",
@@ -64,7 +64,6 @@
   "dependencies": {
     "@alwatr/nanolib": "^5.2.1",
     "@alwatr/nitrobase-engine": "workspace:^",
-    "@alwatr/nitrobase-reference": "workspace:^",
     "@alwatr/nitrobase-types": "workspace:^"
   },
   "devDependencies": {
