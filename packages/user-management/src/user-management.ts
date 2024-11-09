@@ -9,12 +9,6 @@ import {logger} from './logger.js';
 import type {AlwatrNitrobase} from '@alwatr/nitrobase-engine';
 import type {DocumentReference} from '@alwatr/nitrobase-reference';
 
-// TODO: Move this file to `nitrobase`
-
-// export interface NitrobaseUserManagementConfig<TUser extends JsonObject> {
-//   rootUser: NewUser<TUser>;
-// }
-
 export type NewUser<TUser extends JsonObject> = AlwatrAuth & {
   data: TUser;
   isManager?: true;
@@ -23,10 +17,6 @@ export type NewUser<TUser extends JsonObject> = AlwatrAuth & {
 interface NitrobaseUserManagementInterface<TUser extends JsonObject> {
   // readonly config: NitrobaseUserManagementConfig<TUser>;
 
-  /**
-   * ...
-   * @returns user id
-   */
   newUser(user: NewUser<TUser>): Promise<void>;
 
   hasUser(userId: string): Promise<boolean>;
@@ -121,11 +111,6 @@ export class NitrobaseUserManagement<TUser extends JsonObject> implements Nitrob
     return (await this.userListCollection_).ids();
   }
 
-  // async generateUserToken(userId: string) {
-  //   const uniqueList = await this.generateTokenUniqueList_(userId);
-  //   return this.cryptoFactory.generateToken(uniqueList);
-  // }
-
   async verifyUserToken(userId: string, token: string) {
     const tokenFileExist = existsSync(await this.getUserTokenFilePath_(userId, token));
     this.logger_.logMethodFull?.('verifyUserToken', {userId, token: token.slice(0, 12) + '...'}, tokenFileExist);
@@ -138,22 +123,6 @@ export class NitrobaseUserManagement<TUser extends JsonObject> implements Nitrob
     this.logger_.logMethodFull?.('getUserDirectory', {userId}, userDirectoryPath);
     return userDirectoryPath;
   }
-
-  // protected async generateTokenUniqueList_(userId: string) {
-  //   const uniqueList: (string | number)[] = [userId];
-
-  //   if (this.config.tokenExtraUniquelyList !== undefined) {
-  //     const userInfo = await this.getUserData(userId);
-  //     this.config.tokenExtraUniquelyList.forEach((key) => {
-  //       const value = userInfo[key];
-  //       if (typeof value === 'string' || typeof value === 'number') {
-  //         uniqueList.push(value);
-  //       }
-  //     });
-  //   }
-
-  //   return uniqueList;
-  // }
 
   protected newUserInfoDocument_(userId: string, userInfo: TUser) {
     this.logger_.logMethodArgs?.('newUserInfoDocument', {userId, userInfo});
