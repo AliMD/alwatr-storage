@@ -1,11 +1,10 @@
 {
-  "name": "@alwatr/nitrobase-user-management",
+  "name": "@alwatr/nitrobase-client",
   "version": "7.4.0",
-  "description": "User management module for Nitrobase, providing user creation, authentication, and data management capabilities.",
+  "description": "",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "keywords": [
-    "user",
-    "user-management",
+    "client",
     "database",
     "storage",
     "json",
@@ -40,9 +39,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Alwatr/nitrobase",
-    "directory": "packages/user-management"
+    "directory": "packages/client"
   },
-  "homepage": "https://github.com/Alwatr/nitrobase/tree/next/packages/user-management#readme",
+  "homepage": "https://github.com/Alwatr/nitrobase/tree/next/packages/client#readme",
   "bugs": {
     "url": "https://github.com/Alwatr/nitrobase/issues"
   },
@@ -52,7 +51,7 @@
     "w": "yarn run watch",
     "c": "yarn run clean",
     "cb": "yarn run clean && yarn run build",
-    "d": "yarn run build:es && yarn node",
+    "d": "yarn node --enable-source-maps --trace-warnings",
     "build": "yarn run build:ts & yarn run build:es",
     "build:es": "nano-build --preset=module",
     "build:ts": "tsc --build",
@@ -63,7 +62,7 @@
   },
   "dependencies": {
     "@alwatr/nanolib": "^5.2.1",
-    "@alwatr/nitrobase-engine": "workspace:^",
+    "@alwatr/nitrobase-helper": "workspace:^",
     "@alwatr/nitrobase-types": "workspace:^"
   },
   "devDependencies": {
