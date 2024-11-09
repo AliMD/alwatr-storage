@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
+
+### Bug Fixes
+
+* **nginx:** change return code from 444 to 403 for unauthorized user access ([7cdb33d](https://github.com/Alwatr/nitrobase/commit/7cdb33d66c1c98f118c623a4cc116d9f60da344a)) by @AliMD
+* **nginx:** update base image from 3.2.0 to 3.3.1 in Dockerfile ([6378cb3](https://github.com/Alwatr/nitrobase/commit/6378cb3913937f9bd09f514648b1f77a06af317f)) by @AliMD
+
 ## [7.4.0](https://github.com/Alwatr/nitrobase/compare/v7.3.1...v7.4.0) (2024-11-08)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
+
+### Features
+
+* **types:** add `AlwatrAuth` ([bff7ab6](https://github.com/Alwatr/nitrobase/commit/bff7ab6cc3850173c30cf3b0408cfda9584df185)) by @mohammadhonarvar
+
 ## [7.4.0](https://github.com/Alwatr/nitrobase/compare/v7.3.1...v7.4.0) (2024-11-08)
 
 ### Dependencies update

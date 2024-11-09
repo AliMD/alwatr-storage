@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
+
+### Code Refactoring
+
+* **engine:** make `config` as a public property ([6453540](https://github.com/Alwatr/nitrobase/commit/6453540aac42340cfe3b7ac9e4c26f904aaccdcc)) by @mohammadhonarvar
+
 ## [7.4.0](https://github.com/Alwatr/nitrobase/compare/v7.3.1...v7.4.0) (2024-11-08)
 
 ### Dependencies update

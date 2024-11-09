@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
+
+### Features
+
+* **nitrobase:** export `nitrobase-user-management` ([338e9ab](https://github.com/Alwatr/nitrobase/commit/338e9ab2699f2e532c194667e10a1aa4e795677f)) by @mohammadhonarvar
+
 ## [7.4.1](https://github.com/Alwatr/nitrobase/compare/v7.4.0...v7.4.1) (2024-11-08)
 
 ### Bug Fixes
