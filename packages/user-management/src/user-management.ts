@@ -1,12 +1,13 @@
 import {dirname, resolve} from 'node:path';
 
-import {createLogger} from 'alwatr/nanolib';
-import {existsSync, makeEmptyFile} from 'alwatr/nanolib/node-fs';
-import {DocumentReference, Region, type AlwatrNitrobase, type StoreFileId, type StoreFileMeta} from 'alwatr/nitrobase';
+import {createLogger} from '@alwatr/nanolib';
+import {existsSync, makeEmptyFile} from '@alwatr/nanolib/node-fs';
+import {Region, type AlwatrAuth, type StoreFileId, type StoreFileMeta} from '@alwatr/nitrobase-types';
 
-import {config, logger} from '../config.js';
+import {logger} from './logger.js';
 
-import type {AlwatrAuth} from 'common';
+import type {AlwatrNitrobase} from '@alwatr/nitrobase-engine';
+import type {DocumentReference} from '@alwatr/nitrobase-reference';
 
 // TODO: Move this file to `nitrobase`
 
@@ -133,7 +134,7 @@ export class NitrobaseUserManagement<TUser extends JsonObject> implements Nitrob
 
   async getUserDirectory(userId: string) {
     const userInfoDocument = await this.openUserInfoDocument_(userId);
-    const userDirectoryPath = dirname(resolve(config.nitrobase.config.rootPath, userInfoDocument.path));
+    const userDirectoryPath = dirname(resolve(this.nitrobase_.config.rootPath, userInfoDocument.path));
     this.logger_.logMethodFull?.('getUserDirectory', {userId}, userDirectoryPath);
     return userDirectoryPath;
   }
