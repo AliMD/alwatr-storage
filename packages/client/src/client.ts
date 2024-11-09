@@ -1,46 +1,49 @@
 import {createLogger, fetchJson, HttpStatusCodes, resolveUrl, type FetchOptions, type ResponseError} from '@alwatr/nanolib';
 import {getStorePath} from '@alwatr/nitrobase-helper';
-import {StoreFileType, type CollectionContext, type StoreFileContext, type StoreFileId, type StoreFileStat} from '@alwatr/nitrobase-types';
+import {
+  StoreFileType,
+  type AlwatrAuth,
+  type CollectionContext,
+  type StoreFileContext,
+  type StoreFileId,
+  type StoreFileStat,
+} from '@alwatr/nitrobase-types';
 
 const logger = /* #__PURE__ */ createLogger('alwatr-client-nitrobase');
 
-export type AlwatrAuth = {
-  userId: string;
-  userToken: string;
-};
-
 export type NitrobaseDocumentContext<TData extends JsonObject = JsonObject> = StoreFileContext<TData>;
 
+/**
+ * Recommended config
+ * ```
+ *  apiUrl = '/api/s7';
+ *
+ *  alwatrAuthorization: AlwatrAuth = {
+ *     userId: 'anonymous',
+ *     userToken: 'anonymous',
+ *  };
+ *
+ *  fetchOptions: Partial<FetchOptions> = {
+ *   retry: 3,
+ *    retryDelay: '1s',
+ *    timeout: '8s',
+ *    removeDuplicate: 'until_load',
+ *    cacheStorageName: 'nitrobase',
+ *    cacheStrategy: 'network_first',
+ *    priority: 'high',
+ *  };
+ * ```
+ */
+export interface AlwatrClientNitrobaseConfig {
+  apiUrl: string;
+  alwatrAuthorization: AlwatrAuth;
+  fetchOptions: Partial<FetchOptions>;
+}
+
 export abstract class AlwatrClientNitrobaseRepository {
-  /**
-   * The root path of the storage.
-   * This is where the AlwatrClientNitrobase will nitrobase its data.
-   * @default `/api/s7`
-   */
-  apiUrl = '/api/s7';
-
-  /**
-   * The authorization information.
-   * @default `anonymous`
-   */
-  alwatrAuthorization: AlwatrAuth = {
-    userId: 'anonymous',
-    userToken: 'anonymous',
-  };
-
-  fetchOptions: Partial<FetchOptions> = {
-    retry: 3,
-    retryDelay: '1s',
-    timeout: '8s',
-    removeDuplicate: 'until_load',
-    cacheStorageName: 'nitrobase',
-    cacheStrategy: 'network_first',
-    priority: 'high',
-  };
-
   reloadOnSchemaVersionMismatch = true;
 
-  constructor() {
+  constructor(readonly config_: AlwatrClientNitrobaseConfig) {
     logger.logMethod?.('new');
   }
 
@@ -51,9 +54,9 @@ export abstract class AlwatrClientNitrobaseRepository {
 export class AlwatrClientNitrobase extends AlwatrClientNitrobaseRepository {
   private async fetch__<T extends StoreFileContext>(storeStat: StoreFileStat): Promise<ResponseError | T> {
     const response = await fetchJson<T>({
-      ...this.fetchOptions,
-      url: resolveUrl(this.apiUrl, getStorePath(storeStat)),
-      alwatrAuth: this.alwatrAuthorization,
+      ...this.config_.fetchOptions,
+      url: resolveUrl(this.config_.apiUrl, getStorePath(storeStat)),
+      alwatrAuth: this.config_.alwatrAuthorization,
     });
 
     if (response.ok === true && response.meta?.schemaVer !== undefined && response.meta.schemaVer !== (storeStat.schemaVer ?? 1)) {
