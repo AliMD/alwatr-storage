@@ -1,16 +1,8 @@
-import {createLogger, fetchJson, resolveUrl, type FetchOptions, type ResponseError, HttpStatusCodes} from 'alwatr/nanolib';
-import {
-  getStorePath,
-  StoreFileType,
-  type CollectionContext,
-  type StoreFileContext,
-  type StoreFileId,
-  type StoreFileStat,
-} from 'alwatr/nitrobase/client';
+import {createLogger, fetchJson, HttpStatusCodes, resolveUrl, type FetchOptions, type ResponseError} from '@alwatr/nanolib';
+import {getStorePath} from '@alwatr/nitrobase-helper';
+import {StoreFileType, type CollectionContext, type StoreFileContext, type StoreFileId, type StoreFileStat} from '@alwatr/nitrobase-types';
 
 const logger = /* #__PURE__ */ createLogger('alwatr-client-nitrobase');
-
-// @TODO: move this file to nitrobase new package
 
 export type AlwatrAuth = {
   userId: string;
@@ -20,8 +12,6 @@ export type AlwatrAuth = {
 export type NitrobaseDocumentContext<TData extends JsonObject = JsonObject> = StoreFileContext<TData>;
 
 export abstract class AlwatrClientNitrobaseRepository {
-  // TODO: Move to `config` & remove all defaults
-
   /**
    * The root path of the storage.
    * This is where the AlwatrClientNitrobase will nitrobase its data.
