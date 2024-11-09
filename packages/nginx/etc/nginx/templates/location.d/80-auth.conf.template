@@ -7,6 +7,10 @@ if ( $http_authorization ~ ^Alwatr\s+([A-z0-9_=-]+):([A-z0-9_=-]+)$ ) {
   set $authUserToken $2;
 }
 
+# Skip return 403 when method is OPTIONS and continue processing
+if ($request_method = OPTIONS) {
+  break;
+}
 if ($userLocation = 0) {
   return 403;
 }
