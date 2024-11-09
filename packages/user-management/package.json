@@ -40,9 +40,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Alwatr/nitrobase",
-    "directory": "packages/nitrobase-user-management"
+    "directory": "packages/user-management"
   },
-  "homepage": "https://github.com/Alwatr/nitrobase/tree/next/packages/nitrobase-user-management#readme",
+  "homepage": "https://github.com/Alwatr/nitrobase/tree/next/packages/user-management#readme",
   "bugs": {
     "url": "https://github.com/Alwatr/nitrobase/issues"
   },
@@ -54,7 +54,7 @@
     "cb": "yarn run clean && yarn run build",
     "d": "yarn run build:es && yarn node",
     "build": "yarn run build:ts & yarn run build:es",
-    "build:es": "nano-build --preset=module3",
+    "build:es": "nano-build --preset=module",
     "build:ts": "tsc --build",
     "watch": "yarn run watch:ts & yarn run watch:es",
     "watch:es": "yarn run build:es --watch",
