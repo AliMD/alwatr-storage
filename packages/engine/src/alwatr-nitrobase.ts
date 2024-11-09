@@ -82,7 +82,7 @@ export class AlwatrNitrobase {
   /**
    * Constructs an AlwatrNitrobase instance with the provided configuration.
    *
-   * @param config__ The configuration of the AlwatrNitrobase engine.
+   * @param config The configuration of the AlwatrNitrobase engine.
    * @example
    * ```typescript
    * const alwatrStore = new AlwatrNitrobase({
@@ -91,9 +91,9 @@ export class AlwatrNitrobase {
    * });
    * ```
    */
-  constructor(private readonly config__: AlwatrNitrobaseConfig) {
-    logger.logMethodArgs?.('new', config__);
-    this.config__.defaultChangeDebounce ??= 40;
+  constructor(readonly config: AlwatrNitrobaseConfig) {
+    logger.logMethodArgs?.('new', config);
+    this.config.defaultChangeDebounce ??= 40;
     this.rootDb__ = this.loadRootDb__();
     exitHook(this.exitHook__.bind(this));
   }
@@ -198,7 +198,7 @@ export class AlwatrNitrobase {
   ): void {
     logger.logMethodArgs?.('newStoreFile_', stat);
 
-    (stat.changeDebounce as number | undefined) ??= this.config__.defaultChangeDebounce;
+    (stat.changeDebounce as number | undefined) ??= this.config.defaultChangeDebounce;
 
     let fileStoreRef: DocumentReference | CollectionReference;
     if (stat.type === StoreFileType.Document) {
@@ -377,7 +377,7 @@ export class AlwatrNitrobase {
     this.rootDb__.removeItem(id_);
     await delay.by(0);
     try {
-      await unlink(resolve(this.config__.rootPath, path));
+      await unlink(resolve(this.config.rootPath, path));
     }
     catch (error) {
       logger.error('removeStore', 'remove_file_failed', error, {id: storeId, path});
@@ -413,7 +413,7 @@ export class AlwatrNitrobase {
     if (typeof path !== 'string') path = getStorePath(path);
     logger.logMethodArgs?.('readContext__', path);
     logger.time?.(`readContext__time(${path})`);
-    const context = (await readJson(resolve(this.config__.rootPath, path))) as T;
+    const context = (await readJson(resolve(this.config.rootPath, path))) as T;
     logger.timeEnd?.(`readContext__time(${path})`);
     return context;
   }
@@ -430,7 +430,7 @@ export class AlwatrNitrobase {
   private writeContext__<T extends StoreFileContext>(path: string | StoreFileStat, context: T): Promise<void> {
     if (typeof path !== 'string') path = getStorePath(path);
     logger.logMethodArgs?.('writeContext__', path);
-    return writeJson(resolve(this.config__.rootPath, path), context);
+    return writeJson(resolve(this.config.rootPath, path), context);
   }
 
   /**
@@ -459,9 +459,9 @@ export class AlwatrNitrobase {
    */
   private loadRootDb__(): CollectionReference<StoreFileStat> {
     logger.logMethod?.('loadRootDb__');
-    const fullPath = resolve(this.config__.rootPath, getStorePath(AlwatrNitrobase.rootDbStat__));
+    const fullPath = resolve(this.config.rootPath, getStorePath(AlwatrNitrobase.rootDbStat__));
     if (!existsSync(fullPath)) {
-      if (this.config__.errorWhenNotInitialized === true) {
+      if (this.config.errorWhenNotInitialized === true) {
         throw new Error('store_not_found', {cause: 'Nitrobase not initialized'});
       }
 
@@ -482,7 +482,7 @@ export class AlwatrNitrobase {
       logger.logProperty?.(`StoreFile.${ref.id}.hasUnprocessedChanges`, ref.hasUnprocessedChanges_);
       if (ref.hasUnprocessedChanges_ === true && ref.freeze !== true) {
         logger.incident?.('exitHook__', 'rescue_unsaved_context', {id: ref.id});
-        writeJson(resolve(this.config__.rootPath, ref.path), ref.getFullContext_(), true);
+        writeJson(resolve(this.config.rootPath, ref.path), ref.getFullContext_(), true);
         ref.hasUnprocessedChanges_ = false;
       }
     }
