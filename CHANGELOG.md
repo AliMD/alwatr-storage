@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.2](https://github.com/Alwatr/nitrobase/compare/v7.5.1...v7.5.2) (2024-11-09)
+
+### Bug Fixes
+
+* **nginx:** comment out OPTIONS method handling in auth configuration ([25eb239](https://github.com/Alwatr/nitrobase/commit/25eb23943e5da8defebfd9fb4874e86384c2332d)) by @
+
 ## [7.5.1](https://github.com/Alwatr/nitrobase/compare/v7.5.0...v7.5.1) (2024-11-09)
 
 ### Bug Fixes
