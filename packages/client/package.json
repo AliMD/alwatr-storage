@@ -63,7 +63,6 @@
   "dependencies": {
     "@alwatr/nanolib": "^5.2.1",
     "@alwatr/nitrobase-helper": "workspace:^",
-    "@alwatr/nitrobase-reference": "workspace:^",
     "@alwatr/nitrobase-types": "workspace:^"
   },
   "devDependencies": {
