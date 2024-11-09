@@ -1,6 +1,6 @@
 {
   "name": "@alwatr/nitrobase-user-management",
-  "version": "7.4.1",
+  "version": "7.4.0",
   "description": "",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "keywords": [
@@ -40,9 +40,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Alwatr/nitrobase",
-    "directory": "packages/user-management"
+    "directory": "packages/nitrobase-user-management"
   },
-  "homepage": "https://github.com/Alwatr/nitrobase#readme",
+  "homepage": "https://github.com/Alwatr/nitrobase/tree/next/packages/nitrobase-user-management#readme",
   "bugs": {
     "url": "https://github.com/Alwatr/nitrobase/issues"
   },
