@@ -199,7 +199,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/nitrobase-client@workspace:packages/client":
+"@alwatr/nitrobase-client@workspace:^, @alwatr/nitrobase-client@workspace:packages/client":
   version: 0.0.0-use.local
   resolution: "@alwatr/nitrobase-client@workspace:packages/client"
   dependencies:
@@ -306,6 +306,7 @@ __metadata:
   dependencies:
     "@alwatr/nano-build": "npm:^5.0.0"
     "@alwatr/nanolib": "npm:^5.2.1"
+    "@alwatr/nitrobase-client": "workspace:^"
     "@alwatr/nitrobase-engine": "workspace:^"
     "@alwatr/nitrobase-helper": "workspace:^"
     "@alwatr/nitrobase-reference": "workspace:^"
