@@ -1,6 +1,6 @@
-FROM ghcr.io/alwatr/nginx-json:3.3.1
+FROM ghcr.io/alwatr/nginx-json:3.3.3
 
-LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-json:3.3.1"
+LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-json:3.3.3"
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --start-interval=1s --retries=3 CMD curl -fso /dev/null --header 'authorization: Alwatr healthcheck:healthcheck' http://localhost/server-info || exit 1
 
