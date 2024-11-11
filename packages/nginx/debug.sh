@@ -3,7 +3,7 @@
 set -Eeuo pipefail
 trap "echo '❌ Error'" ERR
 
-ALWATR_LIB=../../../alwatr/cloud/classic/lib
+ALWATR_LIB=../../../oldwatr/cloud/classic/lib
 source $ALWATR_LIB/common.sh
 
 command="${1:-help}"
@@ -18,6 +18,7 @@ containerName=alwatr-nitrobase-nginx-debug
 imageName=alwatr/nitrobase-nginx:debug
 remoteHost="$deployUser@$deployHost"
 remotePath="$remoteHost:$deployPath"
+prefixUri=/api/s7
 
 function remoteShellInPath() {
   remoteShell "cd $deployPath/; $@"
@@ -64,26 +65,26 @@ function command_curl() {
   local url="http://$deployHost:$deployPort$1"; shift
   local auth="authorization: $1"; shift
   echoStep "Curl: $url ($auth)"
-  curl --compressed --insecure --silent --show-error --header "$auth" "$@" $url | jq
+  curl --compressed --insecure --silent --show-error --include --header "$auth"  "$@" $url
   echoGap
 }
 
 function command_request() {
   local uri="$1"; shift
   echoStep "Request: $uri"
-  command_curl $uri '' "$@" || true
-  command_curl $uri 'Alwatr anonymous:anonymous' "$@" || true
-  command_curl $uri 'Alwatr Ual1md:Jafang' "$@" || true
-  command_curl $uri 'Alwatr Ual1md1:T0k3n1' "$@" || true
-  command_curl $uri 'Alwatr Ual1md2:T0k3n2' "$@" || true
+  # command_curl $uri '' "$@" || true
+  # command_curl $uri 'Alwatr anonymous:anonymous' "$@" || true
+  # command_curl $uri 'Alwatr Ual1md:Jafang' "$@" || true
+  # command_curl $uri 'Alwatr Ual1md1:T0k3n1' "$@" || true
+  # command_curl $uri 'Alwatr Ual1md2:T0k3n2' "$@" || true
   command_curl $uri 'Alwatr Uadm1n:T0k3nA' "$@" || true
 }
 
 function command_test() {
-  local prefixUri=/api/s6
-
   echoStep "Test..."
   command_request $prefixUri/debug-info-110 --verbose
+
+  # command_request $prefixUri/u/Ual/Ual1md1/info.doc.asj -X OPTIONS -H "Origin: www.example.com" -H "Access-Control-Request-Method: GET" -H "Access-Control-Request-Headers: Content-Type"
 
   echoStep "Test Home..."
   command_request /
