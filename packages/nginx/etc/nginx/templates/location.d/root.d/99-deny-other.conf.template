@@ -1,6 +1,4 @@
 # Deny all unknown location
 # this file must be last in the include list
 
-location / {
-  return 403;
-}
+return 403;
