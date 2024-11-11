@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.3](https://github.com/Alwatr/nitrobase/compare/v7.5.2...v7.5.3) (2024-11-11)
+
+### Bug Fixes
+
+* **debug:** sample data ([b3c3281](https://github.com/Alwatr/nitrobase/commit/b3c32814fe21cfc07e2a7cb78ef970a7c6c280ea)) by @AliMD
+* **nginx:** add 403 response for undefined user locations in region authenticated config ([b59872f](https://github.com/Alwatr/nitrobase/commit/b59872f03d9fae7ce3b4502e041d5870c66e4058)) by @AliMD
+* **nginx:** add 403 response for undefined user locations in region manager and owner configs ([1b9b491](https://github.com/Alwatr/nitrobase/commit/1b9b49135b39073387ee6ce6d79c6592cb3adc66)) by @AliMD
+* **nginx:** add 403 response for undefined user locations in region per-user config ([cfb8c4e](https://github.com/Alwatr/nitrobase/commit/cfb8c4ee1ff4881660cd7b0225c824bdca2ac392)) by @AliMD
+* **nginx:** add 403 response for undefined user locations in region public config ([5c060c8](https://github.com/Alwatr/nitrobase/commit/5c060c8b623a13ae9ddbabb90949fb969761d28e)) by @AliMD
+* **nginx:** add custom message to 403 response in deny-other.conf.template ([f306a39](https://github.com/Alwatr/nitrobase/commit/f306a39c9affd4b2a2c17a94381d410dd183b426)) by @AliMD
+* **nginx:** modify authentication logic to return 403 for unauthorized user locations ([c10116d](https://github.com/Alwatr/nitrobase/commit/c10116d60c6d7f85a2b0cbb5ba7456e29addaac1)) by @AliMD
+* **nginx:** rename all files order ([8922752](https://github.com/Alwatr/nitrobase/commit/8922752b8d746e24f10dc7a24f8f2eefc7e6255f)) by @AliMD
+* **nginx:** update 404 response for secret locations to include custom message ([c982522](https://github.com/Alwatr/nitrobase/commit/c982522426924048ca493ce3e090a2015aaf4a5c)) by @AliMD
+* **nginx:** update base image to version 3.3.3 in Dockerfile ([65fb63a](https://github.com/Alwatr/nitrobase/commit/65fb63ae3fd5b09b4057874d51b98bc5a7f25d8c)) by @AliMD
+* **nginx:** update base image to version 3.3.5 and modify CORS methods ([18bd47e](https://github.com/Alwatr/nitrobase/commit/18bd47ebc98dc0cf0b5bac66d72bdf953f68a0aa)) by @AliMD
+* **nginx:** update library path and comment out unused curl requests in debug script ([c7cc148](https://github.com/Alwatr/nitrobase/commit/c7cc148fafaa34d7d6b3e51b475f6fcd37ab9634)) by @AliMD
+
 ## [7.5.2](https://github.com/Alwatr/nitrobase/compare/v7.5.1...v7.5.2) (2024-11-09)
 
 ### Bug Fixes
