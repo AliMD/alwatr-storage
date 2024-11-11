@@ -1,6 +1,6 @@
-FROM ghcr.io/alwatr/nginx-json:3.3.3
+FROM ghcr.io/alwatr/nginx-json:3.3.5
 
-LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-json:3.3.3"
+LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-json:3.3.5"
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --start-interval=1s --retries=3 CMD curl -fso /dev/null --header 'authorization: Alwatr healthcheck:healthcheck' http://localhost/server-info || exit 1
 
@@ -22,7 +22,7 @@ ENV NGINX_DOCUMENT_ROOT=/data \
     NGINX_DISABLE_SYMLINKS=if_not_owner \
     NGINX_CORS_ENABLE="" \
     NGINX_CORS_ORIGIN="*" \
-    NGINX_CORS_METHODS="GET" \
+    NGINX_CORS_METHODS="GET, OPTIONS" \
     NGINX_CORS_HEADERS="*" \
     NGINX_CORS_MAXAGE=86400
 
