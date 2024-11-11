@@ -1,4 +1,4 @@
 # Deny all unknown location
 # this file must be last in the include list
 
-return 403;
+return 403 'DOR'; # deny other requests
