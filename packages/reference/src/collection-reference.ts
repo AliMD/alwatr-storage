@@ -42,7 +42,6 @@ export class CollectionReference<TItem extends JsonObject = JsonObject> {
    */
   static newRefFromData<TItem extends JsonObject>(
     stat: StoreFileId,
-    initialData: CollectionContext<TItem>['data'] | null,
     updatedCallback: (from: CollectionReference<TItem>) => void,
     debugDomain?: string,
   ): CollectionReference<TItem> {
@@ -62,7 +61,7 @@ export class CollectionReference<TItem extends JsonObject = JsonObject> {
         fv: CollectionReference.fileFormatVersion,
         extra: {},
       },
-      data: initialData ?? {},
+      data: {},
     };
 
     return new CollectionReference(initialContext, updatedCallback, debugDomain);

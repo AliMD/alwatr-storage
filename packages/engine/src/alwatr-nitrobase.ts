@@ -95,6 +95,7 @@ export class AlwatrNitrobase {
     logger.logMethodArgs?.('new', config);
     this.config.defaultChangeDebounce ??= 40;
     this.rootDb__ = this.loadRootDb__();
+    this.storeChanged_ = this.storeChanged_.bind(this);
     exitHook(this.exitHook__.bind(this));
   }
 
@@ -122,7 +123,7 @@ export class AlwatrNitrobase {
    * If a document with the same ID already exists, an error is thrown.
    *
    * @param stat nitrobase file stat
-   * @param initialData initial data for the document
+   * @param data initial data for the document
    * @template TDoc document data type
    * @example
    * ```typescript
@@ -139,17 +140,14 @@ export class AlwatrNitrobase {
    * );
    * ```
    */
-  newDocument<T extends JsonObject = JsonObject>(
-    stat: Omit<StoreFileStat, 'type'>,
-    initialData: DocumentContext<T>['data'] | null = null,
-  ): void {
+  newDocument<TDoc extends JsonObject = JsonObject>(stat: Omit<StoreFileStat, 'type'>, data: TDoc): void {
     logger.logMethodArgs?.('newDocument', stat);
     return this.newStoreFile_(
       {
         ...stat,
         type: StoreFileType.Document,
       },
-      initialData,
+      data,
     );
   }
 
@@ -158,8 +156,6 @@ export class AlwatrNitrobase {
    * If a collection with the same ID already exists, an error is thrown.
    *
    * @param stat nitrobase file stat
-   * @param initialData initial data for the collection
-   * @template TItem collection item data type
    * @example
    * ```typescript
    * await alwatrStore.newCollection<Order>(
@@ -171,17 +167,13 @@ export class AlwatrNitrobase {
    * );
    * ```
    */
-  newCollection<TItem extends JsonObject = JsonObject>(
-    stat: Omit<StoreFileStat, 'type'>,
-    initialData: CollectionContext<TItem>['data'] | null = null,
-  ): void {
+  newCollection(stat: Omit<StoreFileStat, 'type'>): void {
     logger.logMethodArgs?.('newCollection', stat);
     return this.newStoreFile_(
       {
         ...stat,
         type: StoreFileType.Collection,
-      },
-      initialData,
+      }
     );
   }
 
@@ -189,12 +181,11 @@ export class AlwatrNitrobase {
    * Defines a AlwatrNitrobaseFile with the given configuration and initial data.
    *
    * @param stat nitrobase file stat
-   * @param initialData initial data for the document
-   * @template TDoc document data type
+   * @param data initial data for the document
    */
-  newStoreFile_<T extends JsonObject = JsonObject>(
+  newStoreFile_(
     stat: StoreFileStat,
-    initialData: DocumentContext<T>['data'] | CollectionContext<T>['data'] | null = null,
+    data?: DictionaryOpt,
   ): void {
     logger.logMethodArgs?.('newStoreFile_', stat);
 
@@ -202,10 +193,14 @@ export class AlwatrNitrobase {
 
     let fileStoreRef: DocumentReference | CollectionReference;
     if (stat.type === StoreFileType.Document) {
-      fileStoreRef = DocumentReference.newRefFromData(stat, initialData as DocumentContext['data'], this.storeChanged_.bind(this));
+      if (data === undefined) {
+        logger.accident('newStoreFile_', 'document_data_required', stat);
+        throw new Error('document_data_required', {cause: stat});
+      }
+      fileStoreRef = DocumentReference.newRefFromData(stat, data, this.storeChanged_);
     }
     else if (stat.type === StoreFileType.Collection) {
-      fileStoreRef = CollectionReference.newRefFromData(stat, initialData as CollectionContext['data'], this.storeChanged_.bind(this));
+      fileStoreRef = CollectionReference.newRefFromData(stat, this.storeChanged_);
     }
     else {
       logger.accident('newStoreFile_', 'store_file_type_not_supported', stat);
@@ -267,7 +262,7 @@ export class AlwatrNitrobase {
     }
 
     const context = await this.readContext__<DocumentContext<TDoc>>(storeStat);
-    const docRef = DocumentReference.newRefFromContext(context, this.storeChanged_.bind(this));
+    const docRef = DocumentReference.newRefFromContext(context, this.storeChanged_);
     this.cacheReferences__[id] = docRef as unknown as DocumentReference;
     return docRef;
   }
@@ -317,7 +312,7 @@ export class AlwatrNitrobase {
     }
 
     const context = await this.readContext__<CollectionContext<TItem>>(storeStat);
-    const colRef = CollectionReference.newRefFromContext(context, this.storeChanged_.bind(this));
+    const colRef = CollectionReference.newRefFromContext(context, this.storeChanged_);
     this.cacheReferences__[id] = colRef as unknown as CollectionReference;
     return colRef;
   }
@@ -466,11 +461,11 @@ export class AlwatrNitrobase {
       }
 
       logger.banner('Initialize new alwatr-nitrobase');
-      return CollectionReference.newRefFromData(AlwatrNitrobase.rootDbStat__, null, this.storeChanged_.bind(this));
+      return CollectionReference.newRefFromData(AlwatrNitrobase.rootDbStat__, this.storeChanged_);
     }
     // else
     const context = readJson<CollectionContext<StoreFileStat>>(fullPath, true);
-    return CollectionReference.newRefFromContext(context, this.storeChanged_.bind(this), 'root-db');
+    return CollectionReference.newRefFromContext(context, this.storeChanged_, 'root-db');
   }
 
   /**

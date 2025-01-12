@@ -25,14 +25,14 @@ export class DocumentReference<TDoc extends JsonObject = JsonObject> {
    * Creates new DocumentReference instance from stat and initial data.
    *
    * @param statId the document stat.
-   * @param initialData the document data.
+   * @param data the document data.
    * @param updatedCallback the callback to invoke when the document changed.
    * @template TDoc The document data type.
    * @returns A new document reference class.
    */
   static newRefFromData<TDoc extends JsonObject>(
     statId: StoreFileId,
-    initialData: TDoc,
+    data: TDoc,
     updatedCallback: (from: DocumentReference<TDoc>) => unknown,
     debugDomain?: string,
   ): DocumentReference<TDoc> {
@@ -51,7 +51,7 @@ export class DocumentReference<TDoc extends JsonObject = JsonObject> {
         fv: DocumentReference.fileFormatVersion,
         extra: {},
       },
-      data: initialData,
+      data,
     };
 
     return new DocumentReference(initialContext, updatedCallback, debugDomain);
