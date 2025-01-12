@@ -155,8 +155,6 @@ export class AlwatrNitrobase {
    * If a collection with the same ID already exists, an error is thrown.
    *
    * @param stat nitrobase file stat
-   * @param initialData initial data for the collection
-   * @template TItem collection item data type
    * @example
    * ```typescript
    * await alwatrStore.newCollection<Order>(
@@ -168,17 +166,13 @@ export class AlwatrNitrobase {
    * );
    * ```
    */
-  newCollection<TItem extends JsonObject = JsonObject>(
-    stat: Omit<StoreFileStat, 'type'>,
-    initialData: CollectionContext<TItem>['data'] | null = null,
-  ): void {
+  newCollection(stat: Omit<StoreFileStat, 'type'>): void {
     logger.logMethodArgs?.('newCollection', stat);
     return this.newStoreFile_(
       {
         ...stat,
         type: StoreFileType.Collection,
-      },
-      initialData,
+      }
     );
   }
 
