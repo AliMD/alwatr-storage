@@ -95,6 +95,7 @@ export class AlwatrNitrobase {
     logger.logMethodArgs?.('new', config);
     this.config.defaultChangeDebounce ??= 40;
     this.rootDb__ = this.loadRootDb__();
+    this.storeChanged_ = this.storeChanged_.bind(this);
     exitHook(this.exitHook__.bind(this));
   }
 
@@ -196,10 +197,10 @@ export class AlwatrNitrobase {
         logger.accident('newStoreFile_', 'document_data_required', stat);
         throw new Error('document_data_required', {cause: stat});
       }
-      fileStoreRef = DocumentReference.newRefFromData(stat, data, this.storeChanged_.bind(this));
+      fileStoreRef = DocumentReference.newRefFromData(stat, data, this.storeChanged_);
     }
     else if (stat.type === StoreFileType.Collection) {
-      fileStoreRef = CollectionReference.newRefFromData(stat, this.storeChanged_.bind(this));
+      fileStoreRef = CollectionReference.newRefFromData(stat, this.storeChanged_);
     }
     else {
       logger.accident('newStoreFile_', 'store_file_type_not_supported', stat);
@@ -261,7 +262,7 @@ export class AlwatrNitrobase {
     }
 
     const context = await this.readContext__<DocumentContext<TDoc>>(storeStat);
-    const docRef = DocumentReference.newRefFromContext(context, this.storeChanged_.bind(this));
+    const docRef = DocumentReference.newRefFromContext(context, this.storeChanged_);
     this.cacheReferences__[id] = docRef as unknown as DocumentReference;
     return docRef;
   }
@@ -311,7 +312,7 @@ export class AlwatrNitrobase {
     }
 
     const context = await this.readContext__<CollectionContext<TItem>>(storeStat);
-    const colRef = CollectionReference.newRefFromContext(context, this.storeChanged_.bind(this));
+    const colRef = CollectionReference.newRefFromContext(context, this.storeChanged_);
     this.cacheReferences__[id] = colRef as unknown as CollectionReference;
     return colRef;
   }
@@ -460,11 +461,11 @@ export class AlwatrNitrobase {
       }
 
       logger.banner('Initialize new alwatr-nitrobase');
-      return CollectionReference.newRefFromData(AlwatrNitrobase.rootDbStat__, null, this.storeChanged_.bind(this));
+      return CollectionReference.newRefFromData(AlwatrNitrobase.rootDbStat__, this.storeChanged_);
     }
     // else
     const context = readJson<CollectionContext<StoreFileStat>>(fullPath, true);
-    return CollectionReference.newRefFromContext(context, this.storeChanged_.bind(this), 'root-db');
+    return CollectionReference.newRefFromContext(context, this.storeChanged_, 'root-db');
   }
 
   /**
