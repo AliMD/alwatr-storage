@@ -122,7 +122,7 @@ export class AlwatrNitrobase {
    * If a document with the same ID already exists, an error is thrown.
    *
    * @param stat nitrobase file stat
-   * @param initialData initial data for the document
+   * @param data initial data for the document
    * @template TDoc document data type
    * @example
    * ```typescript
@@ -180,12 +180,11 @@ export class AlwatrNitrobase {
    * Defines a AlwatrNitrobaseFile with the given configuration and initial data.
    *
    * @param stat nitrobase file stat
-   * @param initialData initial data for the document
-   * @template TDoc document data type
+   * @param data initial data for the document
    */
-  newStoreFile_<T extends JsonObject = JsonObject>(
+  newStoreFile_(
     stat: StoreFileStat,
-    initialData: DocumentContext<T>['data'] | CollectionContext<T>['data'] | null = null,
+    data?: DictionaryOpt,
   ): void {
     logger.logMethodArgs?.('newStoreFile_', stat);
 
@@ -193,10 +192,14 @@ export class AlwatrNitrobase {
 
     let fileStoreRef: DocumentReference | CollectionReference;
     if (stat.type === StoreFileType.Document) {
-      fileStoreRef = DocumentReference.newRefFromData(stat, initialData as DocumentContext['data'], this.storeChanged_.bind(this));
+      if (data === undefined) {
+        logger.accident('newStoreFile_', 'document_data_required', stat);
+        throw new Error('document_data_required', {cause: stat});
+      }
+      fileStoreRef = DocumentReference.newRefFromData(stat, data, this.storeChanged_.bind(this));
     }
     else if (stat.type === StoreFileType.Collection) {
-      fileStoreRef = CollectionReference.newRefFromData(stat, initialData as CollectionContext['data'], this.storeChanged_.bind(this));
+      fileStoreRef = CollectionReference.newRefFromData(stat, this.storeChanged_.bind(this));
     }
     else {
       logger.accident('newStoreFile_', 'store_file_type_not_supported', stat);
