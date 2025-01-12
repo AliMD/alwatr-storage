@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.4](https://github.com/Alwatr/nitrobase/compare/v7.5.3...v7.5.4) (2025-01-12)
+
+### Dependencies update
+
+* **deps-dev:** bump the dependencies group across 1 directory with 11 updates ([fdd30a6](https://github.com/Alwatr/nitrobase/commit/fdd30a6639ae7ead4e8dbfaca0295cb2bf0e6649)) by @dependabot[bot]
+
 ## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
 
 **Note:** Version bump only for package @alwatr/nitrobase-helper

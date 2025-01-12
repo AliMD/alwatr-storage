@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.4](https://github.com/Alwatr/nitrobase/compare/v7.5.3...v7.5.4) (2025-01-12)
+
+### Bug Fixes
+
+* **reference:** remove initialData parameter from newRefFromData method and default data to an empty object ([c89c172](https://github.com/Alwatr/nitrobase/commit/c89c172d8ee1f6f5b7b56b2cef6f129cdf680277)) by @alimd
+* **reference:** rename initialData parameter to data in newRefFromData method ([cf389b8](https://github.com/Alwatr/nitrobase/commit/cf389b8c80cccbf9e327c680c8ffbd3c595f2155)) by @alimd
+
+### Dependencies update
+
+* **deps-dev:** bump the dependencies group across 1 directory with 11 updates ([fdd30a6](https://github.com/Alwatr/nitrobase/commit/fdd30a6639ae7ead4e8dbfaca0295cb2bf0e6649)) by @dependabot[bot]
+
 ## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
 
 **Note:** Version bump only for package @alwatr/nitrobase-reference

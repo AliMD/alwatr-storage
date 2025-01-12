@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.4](https://github.com/Alwatr/nitrobase/compare/v7.5.3...v7.5.4) (2025-01-12)
+
+### Bug Fixes
+
+* **nitrobase:** optional data in newStoreFile_ and throw Error when data not exist for document type ([6d2a173](https://github.com/Alwatr/nitrobase/commit/6d2a173ca4414d6928ef1b703dd0836648eb0787)) by @alimd
+* **nitrobase:** remove initialData parameter from newCollection method ([56cacf0](https://github.com/Alwatr/nitrobase/commit/56cacf0e65e8be2d68f4621eaf4e6d847bf39293)) by @alimd
+* **nitrobase:** required initial data  for newDocument ([61f1788](https://github.com/Alwatr/nitrobase/commit/61f178850594ccfc0c1a4ab9429cc2e0438eb11c)) by @alimd
+
+### Code Refactoring
+
+* **nitrobase:** bind storeChanged_ method directly instead of using bind in multiple locations ([dba1da6](https://github.com/Alwatr/nitrobase/commit/dba1da6bf095e6984af98d8e6c65c64fcc3fb5af)) by @alimd
+
+### Dependencies update
+
+* **deps-dev:** bump the dependencies group across 1 directory with 11 updates ([fdd30a6](https://github.com/Alwatr/nitrobase/commit/fdd30a6639ae7ead4e8dbfaca0295cb2bf0e6649)) by @dependabot[bot]
+
 ## [7.5.0](https://github.com/Alwatr/nitrobase/compare/v7.4.1...v7.5.0) (2024-11-09)
 
 ### Code Refactoring
