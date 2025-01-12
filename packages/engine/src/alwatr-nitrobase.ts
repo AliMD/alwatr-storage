@@ -139,17 +139,14 @@ export class AlwatrNitrobase {
    * );
    * ```
    */
-  newDocument<T extends JsonObject = JsonObject>(
-    stat: Omit<StoreFileStat, 'type'>,
-    initialData: DocumentContext<T>['data'] | null = null,
-  ): void {
+  newDocument<TDoc extends JsonObject = JsonObject>(stat: Omit<StoreFileStat, 'type'>, data: TDoc): void {
     logger.logMethodArgs?.('newDocument', stat);
     return this.newStoreFile_(
       {
         ...stat,
         type: StoreFileType.Document,
       },
-      initialData,
+      data,
     );
   }
 
