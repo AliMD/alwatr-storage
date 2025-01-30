@@ -367,7 +367,7 @@ export class DocumentReference<TDoc extends JsonObject = JsonObject> {
     this.refreshMetadata_();
 
     if (this._freeze === true) return; // prevent save if frozen
-    this.updatedCallback__.call(null, this);
+    this.updatedCallback__(this);
   }
 
   /**
