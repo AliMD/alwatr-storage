@@ -95,7 +95,6 @@ export class AlwatrNitrobase {
     logger.logMethodArgs?.('new', config);
     this.config.defaultChangeDebounce ??= 40;
     this.rootDb__ = this.loadRootDb__();
-    this.storeChanged_ = this.storeChanged_.bind(this);
     exitHook(this.exitHook__.bind(this));
   }
 
@@ -434,7 +433,7 @@ export class AlwatrNitrobase {
    * @param from nitrobase file reference
    * @returns A promise that resolves when the write operation is complete.
    */
-  protected async storeChanged_<T extends JsonObject>(from: DocumentReference<T> | CollectionReference<T>): Promise<void> {
+  protected storeChanged_ = (async <T extends JsonObject>(from: DocumentReference<T> | CollectionReference<T>) => {
     logger.logMethodArgs?.('storeChanged__', from.id);
     const rev = from.getStoreMeta().rev;
     try {
@@ -447,7 +446,7 @@ export class AlwatrNitrobase {
     catch (error) {
       logger.error('storeChanged__', 'write_context_failed', {id: from.id, error});
     }
-  }
+  }).bind(this);
 
   /**
    * Load storeFilesCollection or create new one.
