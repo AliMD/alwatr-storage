@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.5](https://github.com/Alwatr/nitrobase/compare/v7.5.4...v7.5.5) (2025-02-02)
+
+### Bug Fixes
+
+* update callback invocation to use correct context in CollectionReference and DocumentReference ([7cc9fc9](https://github.com/Alwatr/nitrobase/commit/7cc9fc95967d5047b41b2c9c6fd56608256fdbeb)) by @alimd
+
+### Miscellaneous Chores
+
+* disable signing for git tags and commits in lerna configuration ([ae0a66e](https://github.com/Alwatr/nitrobase/commit/ae0a66e32f9784b5c41fb0b702c9e182a59f2b13)) by @
+
+### Dependencies update
+
+* **deps-dev:** bump @types/node ([d60ee96](https://github.com/Alwatr/nitrobase/commit/d60ee96716b8df7837b3d7f9fe4b8705c94e5af0)) by @dependabot[bot]
+* **deps:** bump the github-actions group across 1 directory with 3 updates ([43b2fe7](https://github.com/Alwatr/nitrobase/commit/43b2fe7fe3699550b8845c3faf877e52c44e57f5)) by @dependabot[bot]
+* update ([0b9eccd](https://github.com/Alwatr/nitrobase/commit/0b9eccd3b54dade17e3eeb94bd08612c57356801)) by @alimd
+
 ## [7.5.4](https://github.com/Alwatr/nitrobase/compare/v7.5.3...v7.5.4) (2025-01-12)
 
 ### Bug Fixes

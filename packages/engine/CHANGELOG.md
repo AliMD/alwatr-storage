@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.5](https://github.com/Alwatr/nitrobase/compare/v7.5.4...v7.5.5) (2025-02-02)
+
+### Dependencies update
+
+* **deps-dev:** bump @types/node ([d60ee96](https://github.com/Alwatr/nitrobase/commit/d60ee96716b8df7837b3d7f9fe4b8705c94e5af0)) by @dependabot[bot]
+* update ([0b9eccd](https://github.com/Alwatr/nitrobase/commit/0b9eccd3b54dade17e3eeb94bd08612c57356801)) by @alimd
+
 ## [7.5.4](https://github.com/Alwatr/nitrobase/compare/v7.5.3...v7.5.4) (2025-01-12)
 
 ### Bug Fixes
