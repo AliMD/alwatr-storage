@@ -596,7 +596,7 @@ export class CollectionReference<TItem extends JsonObject = JsonObject> {
     if (itemId === null) this.refreshMeta_(itemId); // root meta not updated for null
 
     if (this._freeze === true) return; // prevent save if frozen
-    this.updatedCallback__.call(null, this);
+    this.updatedCallback__(this);
   }
 
   /**
