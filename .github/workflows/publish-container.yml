@@ -103,7 +103,7 @@ jobs:
 
       - name: 🚀 Build and export to docekr
         if: ${{ steps.file_change.outputs.container_folder != 'false' }}
-        uses: docker/build-push-action@v6.11.0
+        uses: docker/build-push-action@v6.13.0
         with:
           context: ./${{matrix.context}}
           file: ${{matrix.path}}/Dockerfile
@@ -123,7 +123,7 @@ jobs:
 
       - name: 🚀 Build and publish container image
         if: ${{ steps.file_change.outputs.container_folder != 'false' }}
-        uses: docker/build-push-action@v6.11.0
+        uses: docker/build-push-action@v6.13.0
         with:
           context: ./${{matrix.context}}
           file: ${{matrix.path}}/Dockerfile
