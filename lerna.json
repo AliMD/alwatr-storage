@@ -86,8 +86,8 @@
       "message": "release:",
       "private": true,
       "forceGitTag": true,
-      "signGitTag": true,
-      "signGitCommit": true,
+      "signGitTag": false,
+      "signGitCommit": false,
       "push": true,
       "createRelease": "github"
     },
