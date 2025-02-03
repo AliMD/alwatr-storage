@@ -92,10 +92,11 @@ export class AlwatrNitrobase {
    * ```
    */
   constructor(readonly config: AlwatrNitrobaseConfig) {
+    this.storeChanged_ = this.storeChanged_.bind(this);
+
     logger.logMethodArgs?.('new', config);
     this.config.defaultChangeDebounce ??= 40;
     this.rootDb__ = this.loadRootDb__();
-    this.storeChanged_ = this.storeChanged_.bind(this);
     exitHook(this.exitHook__.bind(this));
   }
 
