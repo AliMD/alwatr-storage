@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.7](https://github.com/Alwatr/nitrobase/compare/v7.5.6...v7.5.7) (2025-02-03)
+
+### Dependencies update
+
+* update [@alwatr](https://github.com/alwatr) dependencies to latest versions ([f8bb10f](https://github.com/Alwatr/nitrobase/commit/f8bb10fa3343f25e2a442e80fbddb88c55fac813)) by @
+
 ## [7.5.6](https://github.com/Alwatr/nitrobase/compare/v7.5.5...v7.5.6) (2025-02-03)
 
 ### Bug Fixes
