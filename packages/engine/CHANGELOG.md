@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.6](https://github.com/Alwatr/nitrobase/compare/v7.5.5...v7.5.6) (2025-02-03)
+
+### Bug Fixes
+
+* bind storeChanged_ method in constructor for proper context ([#350](https://github.com/Alwatr/nitrobase/issues/350)) ([33cf076](https://github.com/Alwatr/nitrobase/commit/33cf0767fa6f78512b687580dc1260cf882c9197)) by @
+
 ## [7.5.5](https://github.com/Alwatr/nitrobase/compare/v7.5.4...v7.5.5) (2025-02-02)
 
 ### Dependencies update
