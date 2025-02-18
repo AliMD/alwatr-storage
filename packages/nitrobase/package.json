@@ -65,7 +65,7 @@
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@alwatr/nanolib": "^5.3.1",
+    "@alwatr/nanolib": "^5.4.0",
     "@alwatr/nitrobase-engine": "workspace:^",
     "@alwatr/nitrobase-helper": "workspace:^",
     "@alwatr/nitrobase-reference": "workspace:^",
@@ -73,11 +73,11 @@
     "@alwatr/nitrobase-user-management": "workspace:^"
   },
   "devDependencies": {
-    "@alwatr/nano-build": "^5.3.0",
+    "@alwatr/nano-build": "^5.4.0",
     "@alwatr/prettier-config": "^5.0.0",
     "@alwatr/tsconfig-base": "^5.0.0",
     "@alwatr/type-helper": "^5.3.0",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "typescript": "^5.7.3"
   }
 }
