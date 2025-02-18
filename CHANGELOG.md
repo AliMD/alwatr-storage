@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.8](https://github.com/Alwatr/nitrobase/compare/v7.5.7...v7.5.8) (2025-02-18)
+
+### Miscellaneous Chores
+
+* **deps:** bump alwatr/nginx-json in /packages/nginx ([09bc34d](https://github.com/Alwatr/nitrobase/commit/09bc34d8bde53c390c925922df2983d2d9f928eb)) by @dependabot[bot]
+
+### Dependencies update
+
+* bump @alwatr/nanolib, @alwatr/nano-build, and @types/node to latest versions across multiple packages ([3e89c62](https://github.com/Alwatr/nitrobase/commit/3e89c62ad20f3afe0c38c6ae36d91bcb6199b231)) by @
+* **deps-dev:** bump the dependencies group across 1 directory with 2 updates ([03715d0](https://github.com/Alwatr/nitrobase/commit/03715d0b5534b127dfb57ffe0ea713fb168eefe6)) by @dependabot[bot]
+* **deps:** bump @octokit/endpoint from 10.1.1 to 10.1.3 ([c6f500c](https://github.com/Alwatr/nitrobase/commit/c6f500c5d97f6359664481e287b9c0285fba51e2)) by @dependabot[bot]
+* **deps:** bump @octokit/plugin-paginate-rest from 11.4.0 to 11.4.2 ([cf23cc1](https://github.com/Alwatr/nitrobase/commit/cf23cc13b45c159bcbd4ef0caff3a70e0bedc54c)) by @dependabot[bot]
+* **deps:** bump the github-actions group across 1 directory with 3 updates ([8b2981f](https://github.com/Alwatr/nitrobase/commit/8b2981f78e28395fd294e45f6fd310a97865d0e3)) by @dependabot[bot]
+
 ## [7.5.7](https://github.com/Alwatr/nitrobase/compare/v7.5.6...v7.5.7) (2025-02-03)
 
 ### Dependencies update

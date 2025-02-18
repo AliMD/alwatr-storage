@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.8](https://github.com/Alwatr/nitrobase/compare/v7.5.7...v7.5.8) (2025-02-18)
+
+### Dependencies update
+
+* bump @alwatr/nanolib, @alwatr/nano-build, and @types/node to latest versions across multiple packages ([3e89c62](https://github.com/Alwatr/nitrobase/commit/3e89c62ad20f3afe0c38c6ae36d91bcb6199b231)) by @
+* **deps-dev:** bump the dependencies group across 1 directory with 2 updates ([03715d0](https://github.com/Alwatr/nitrobase/commit/03715d0b5534b127dfb57ffe0ea713fb168eefe6)) by @dependabot[bot]
+
 ## [7.5.7](https://github.com/Alwatr/nitrobase/compare/v7.5.6...v7.5.7) (2025-02-03)
 
 ### Dependencies update

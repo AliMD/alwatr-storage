@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.8](https://github.com/Alwatr/nitrobase/compare/v7.5.7...v7.5.8) (2025-02-18)
+
+### Miscellaneous Chores
+
+* **deps:** bump alwatr/nginx-json in /packages/nginx ([09bc34d](https://github.com/Alwatr/nitrobase/commit/09bc34d8bde53c390c925922df2983d2d9f928eb)) by @dependabot[bot]
+
 ## [7.5.3](https://github.com/Alwatr/nitrobase/compare/v7.5.2...v7.5.3) (2024-11-11)
 
 ### Bug Fixes
