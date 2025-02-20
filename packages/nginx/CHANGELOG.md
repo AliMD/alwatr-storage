@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.9](https://github.com/Alwatr/nitrobase/compare/v7.5.8...v7.5.9) (2025-02-20)
+
+### Bug Fixes
+
+* **nginx:** remove error message from 403 response for undefined users ([3c762c8](https://github.com/Alwatr/nitrobase/commit/3c762c859d057ebaf09f1a2d60f5e082cfd3a15b)) by @alimd
+
 ## [7.5.8](https://github.com/Alwatr/nitrobase/compare/v7.5.7...v7.5.8) (2025-02-18)
 
 ### Miscellaneous Chores
