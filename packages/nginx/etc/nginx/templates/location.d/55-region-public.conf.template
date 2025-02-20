@@ -3,7 +3,7 @@
 
 location /$nitrobaseRegionPublic/ {
   if ($userLocation = 0) {
-    return 403 'UND'; # User not defined
+    return 403; # User not defined
   }
 
   try_files $uri =404;

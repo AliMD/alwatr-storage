@@ -3,7 +3,7 @@
 
 location ~ ^/$nitrobaseRegionPerOwner/[A-z0-9_=-]+/[A-z0-9_=-]+/ {
   if ($userLocation = 0) {
-    return 403 'UND'; # User not defined
+    return 403; # User not defined
     break;
   }
 

@@ -3,7 +3,7 @@
 
 location /$nitrobaseRegionAuthenticated/ {
   if ($userLocation = 0) {
-    return 403 'UND'; # User not defined
+    return 403; # User not defined
     break;
   }
 
