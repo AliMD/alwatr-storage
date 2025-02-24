@@ -1,7 +1,7 @@
-# extract $userLocation from first 3 characters of `$authUserId`.
+# extract $userLocation from first 3 characters of `$authUserId` and convert to lowercase.
 map $authUserId $userLocation {
   default 0;
   # Micro optimization: if `$authUserId` is zero, don't bother with regex.
   0 0;
-  "~^(.{3})" $nitrobaseRegionPerUser/\L$1/$authUserId;
+  "~^(.{3})" $nitrobaseRegionPerUser/${1,,}/$authUserId;
 }
