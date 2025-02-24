@@ -3,5 +3,5 @@ map $authUserId $userLocation {
   default 0;
   # Micro optimization: if `$authUserId` is zero, don't bother with regex.
   0 0;
-  "~^(?<prefix>.{3})" $nitrobaseRegionPerUser/$prefix/$authUserId;
+  "~^(?<prefix>.{3})" $nitrobaseRegionPerUser/${prefix,,}/$authUserId;
 }
