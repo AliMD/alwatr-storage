@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.0](https://github.com/Alwatr/nitrobase/compare/v7.5.9...v8.0.0) (2025-02-24)
+
+**Note:** Version bump only for package @alwatr/nitrobase-nginx
+
 ## [7.5.9](https://github.com/Alwatr/nitrobase/compare/v7.5.8...v7.5.9) (2025-02-20)
 
 ### Bug Fixes

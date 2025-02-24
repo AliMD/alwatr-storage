@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.0](https://github.com/Alwatr/nitrobase/compare/v7.5.9...v8.0.0) (2025-02-24)
+
+### ⚠ BREAKING CHANGES
+
+* **helper:** existing db must be migrated
+
+simple bash script to convert current db folder
+
+```sh
+for folder in o/*/ u/*/; do
+  echo "process $folder";
+  if [ -d "$folder" ]; then
+    lowercase_folder=$(echo "$folder" | tr '[:upper:]' '[:lower:]')
+    if [[ "$folder" != "$lowercase_folder" ]]; then
+      mv -v "$folder" "$lowercase_folder"
+    fi
+  fi
+done
+```
+
+### Bug Fixes
+
+* **helper:** ensure ownerId is converted to lowercase in store path to prevent conflict in case insensitive file systems ([2f95566](https://github.com/Alwatr/nitrobase/commit/2f955663c907a185faaf41e9b114056a52c59def)) by @
+
 ## [7.5.8](https://github.com/Alwatr/nitrobase/compare/v7.5.7...v7.5.8) (2025-02-18)
 
 ### Dependencies update

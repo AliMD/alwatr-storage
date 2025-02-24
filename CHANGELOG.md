@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.0](https://github.com/Alwatr/nitrobase/compare/v7.5.9...v8.0.0) (2025-02-24)
+
+### ⚠ BREAKING CHANGES
+
+* **helper:** existing db must be migrated
+
+simple bash script to convert current db folder
+
+```sh
+for folder in o/*/ u/*/; do
+  echo "process $folder";
+  if [ -d "$folder" ]; then
+    lowercase_folder=$(echo "$folder" | tr '[:upper:]' '[:lower:]')
+    if [[ "$folder" != "$lowercase_folder" ]]; then
+      mv -v "$folder" "$lowercase_folder"
+    fi
+  fi
+done
+```
+
+### Bug Fixes
+
+* **helper:** ensure ownerId is converted to lowercase in store path to prevent conflict in case insensitive file systems ([2f95566](https://github.com/Alwatr/nitrobase/commit/2f955663c907a185faaf41e9b114056a52c59def)) by @
+
+### Dependencies update
+
+* **deps-dev:** bump eslint-import-resolver-typescript ([e8ad95b](https://github.com/Alwatr/nitrobase/commit/e8ad95b1fc1b4169b5e03c455946c938cc87f71d)) by @dependabot[bot]
+* **deps:** bump the github-actions group across 1 directory with 3 updates ([4e51263](https://github.com/Alwatr/nitrobase/commit/4e5126343c9cc42f8cc62081931d73e4bbd1dbfa)) by @dependabot[bot]
+
 ## [7.5.9](https://github.com/Alwatr/nitrobase/compare/v7.5.8...v7.5.9) (2025-02-20)
 
 ### Bug Fixes
