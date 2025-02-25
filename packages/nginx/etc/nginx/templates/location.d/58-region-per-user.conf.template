@@ -3,7 +3,7 @@
 
 location ~ ^/(?<requestLocation>$nitrobaseRegionPerUser/[A-z0-9_=-]+/[A-z0-9_=-]+)/ {
 
-  if ($userLocation = 0) {
+  if ($authUserToken = 0) {
     return 403; # User not defined
     break;
   }
