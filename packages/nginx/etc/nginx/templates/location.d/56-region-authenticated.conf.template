@@ -2,7 +2,7 @@
 # Nitrobase file location that can be accessed by authenticated users.
 
 location /$nitrobaseRegionAuthenticated/ {
-  if ($userLocation = 0) {
+  if ($authUserToken = 0) {
     return 403; # User not defined
     break;
   }
