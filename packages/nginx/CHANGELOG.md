@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/Alwatr/nitrobase/compare/v8.0.2...v8.0.3) (2025-02-25)
+
+### Bug Fixes
+
+* **nginx:** add $userIdPrefix in nitrobaseDebugPath ([e0953ac](https://github.com/Alwatr/nitrobase/commit/e0953acd5dfe73853dbe5e026fd65678356a5b98)) by @alimd
+* **nginx:** add user location extraction with lowercase userIdPrefix ([eb405f1](https://github.com/Alwatr/nitrobase/commit/eb405f110d7f0b8f8b60dde451550cdc47a87510)) by @alimd
+* **nginx:** disable PCRE JIT compilation in nginx configuration template ([1628950](https://github.com/Alwatr/nitrobase/commit/16289507d541c7071c9cda1263ed3f4aa0faa821)) by @alimd
+* **nginx:** rename some configs files ([b465d0f](https://github.com/Alwatr/nitrobase/commit/b465d0feeaef7fd18b1cbd9cdfbaf6573c800e19)) by @alimd
+* **nginx:** simplify deny response in configuration template ([633f9e8](https://github.com/Alwatr/nitrobase/commit/633f9e8521429f5272fb742a4e5e461f5774d943)) by @alimd
+* **nginx:** simplify deny response in region secret location configuration ([ab87940](https://github.com/Alwatr/nitrobase/commit/ab8794062c048193564a821f363032da5d5fc1db)) by @alimd
+* **nginx:** update user ID prefix extraction in mapping configuration ([5b2b9ae](https://github.com/Alwatr/nitrobase/commit/5b2b9aefc1c480c76086d04d7a18a5a5bb103e21)) by @alimd
+* **nginx:** update user location check to use authUserToken for access control ([e4eec41](https://github.com/Alwatr/nitrobase/commit/e4eec419924946ed1c610a3d8343d8a3393c59c9)) by @alimd
+* **nginx:** update user location check to use authUserToken for access control ([393a9d5](https://github.com/Alwatr/nitrobase/commit/393a9d52898a7d137b9fcc759b39c6eedcf5e3a1)) by @alimd
+* **nginx:** update user location check to use authUserToken for access control ([21c3f5c](https://github.com/Alwatr/nitrobase/commit/21c3f5c7a8e38ae34867552065e02ee3cc8787cb)) by @alimd
+* **nginx:** update user location check to use authUserToken for access control ([fc2f9e8](https://github.com/Alwatr/nitrobase/commit/fc2f9e8bec37691207b92742f0fea44cbb60bca2)) by @alimd
+* **nginx:** update user location check to use authUserToken for access control ([ea71e89](https://github.com/Alwatr/nitrobase/commit/ea71e896f45b68031723664f96fef95130d5247c)) by @alimd
+* **nginx:** update user location extraction to convert prefix to lowercase ([3cffd52](https://github.com/Alwatr/nitrobase/commit/3cffd5257e3c45447be60d71236ee4c9b765d04d)) by @alimd
+
+### Performance Improvements
+
+* **nginx:** enable PCRE JIT compilation in nginx configuration template ([78187bd](https://github.com/Alwatr/nitrobase/commit/78187bdc99f7dcc143781cb6aafd61360618e948)) by @alimd
+
 ## [8.0.2](https://github.com/Alwatr/nitrobase/compare/v8.0.1...v8.0.2) (2025-02-24)
 
 ### Bug Fixes
