@@ -2,7 +2,7 @@
 # Nitrobase file location that can be accessed by admin and managers only.
 
 location /$nitrobaseRegionManagers/ {
-  if ($userLocation = 0) {
+  if ($authUserToken = 0) {
     return 403; # User not defined
     break;
   }
