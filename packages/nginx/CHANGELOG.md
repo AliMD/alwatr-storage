@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.5](https://github.com/Alwatr/nitrobase/compare/v8.0.4...v8.0.5) (2025-02-25)
+
+### Bug Fixes
+
+* **nginx:** correct user location variable assignment to preserve userIdPrefix casing ([5bbb41d](https://github.com/Alwatr/nitrobase/commit/5bbb41d2f772253c8d80cc43fd511c745f021dfb)) by @alimd
+
 ## [8.0.4](https://github.com/Alwatr/nitrobase/compare/v8.0.3...v8.0.4) (2025-02-25)
 
 ### Bug Fixes
