@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/Alwatr/nitrobase/compare/v8.0.3...v8.0.4) (2025-02-25)
+
+### Bug Fixes
+
+* **nginx:** add missing semicolon to user location variable assignment ([72667ee](https://github.com/Alwatr/nitrobase/commit/72667eebce55bc7fde1b8af9c844ce389ce05d36)) by @alimd
+* **nginx:** refactor user ID mapping to improve variable handling ([bd02647](https://github.com/Alwatr/nitrobase/commit/bd02647a788683b90c0da34a37b4d30269683137)) by @alimd
+* **nginx:** refine regex for extracting authUserId and authUserToken from authorization header ([dd34daa](https://github.com/Alwatr/nitrobase/commit/dd34daaee5739ca895223370d5ad41e2f5a8d8d5)) by @alimd
+* **nginx:** update user location configuration to improve variable handling ([defa245](https://github.com/Alwatr/nitrobase/commit/defa2456fd53b2f76ed89324c57e6c7e63bc537d)) by @alimd
+
 ## [8.0.3](https://github.com/Alwatr/nitrobase/compare/v8.0.2...v8.0.3) (2025-02-25)
 
 ### Bug Fixes
