@@ -2,8 +2,7 @@ set $authUserId 0;
 set $authUserToken 0;
 
 # extract $authUserId and $authUserToken from $http_authorization header.
-if ( $http_authorization ~ ^Alwatr\s+([A-z0-9_=-]+):([A-z0-9_=-]+)$ ) {
+if ( $http_authorization ~ ^Alwatr\s+([^/:]+):([^/]+)$ ) {
   set $authUserId $1;
   set $authUserToken $2;
 }
-
