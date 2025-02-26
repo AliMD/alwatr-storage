@@ -71,5 +71,8 @@
     {
       "file": ".vscode/copilot-instruction.md"
     }
-  ]
+  ],
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  }
 }
