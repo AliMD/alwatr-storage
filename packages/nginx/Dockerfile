@@ -34,3 +34,17 @@ ENV nitrobaseApiPrefix="/api/s7" \
     nitrobaseRegionManagers="m" \
     nitrobaseRegionPerUser="u" \
     nitrobaseRegionPerOwner="o"
+
+LABEL org.opencontainers.image.title="alwatr/nitrobase-nginx" \
+    org.opencontainers.image.description="Extremely fast and compact JSON-based database that operates in memory, includes a JSON file backup, and serves over the highly accelerated Nginx." \
+    org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-core:3.5.0" \
+    org.opencontainers.image.version="3.5.0" \
+    org.opencontainers.image.ref.name="3.5.0-nginx1.27.4-alpine-slim" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.created=${BUILD_DATE} \
+    org.opencontainers.image.revision=${BUILD_REV} \
+    org.opencontainers.image.vendor="Alwatr" \
+    org.opencontainers.image.source="https://github.com/Alwatr/nginx" \
+    org.opencontainers.image.url="https://github.com/Alwatr/nginx" \
+    org.opencontainers.image.documentation="https://github.com/Alwatr/nginx" \
+    org.opencontainers.image.authors="S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)"
