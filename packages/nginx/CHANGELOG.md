@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.7.0](https://github.com/Alwatr/nitrobase/compare/v7.6.1...v7.7.0) (2025-02-26)
+
+### Features
+
+* **nginx:** add debugInfo to error response for enhanced troubleshooting ([ff29d37](https://github.com/Alwatr/nitrobase/commit/ff29d374becd60a2616caf170084dd4ba76359fb)) by @alimd
+* **nginx:** add debugInfo variable to location templates for enhanced debugging ([1045c4c](https://github.com/Alwatr/nitrobase/commit/1045c4c624e84b009eb8d93efa978f790dbac351)) by @alimd
+
+### Code Refactoring
+
+* **nginx:** streamline debugInfo variable usage across location templates ([9dc0d91](https://github.com/Alwatr/nitrobase/commit/9dc0d91989679ba16769cbd97cada46db13eeced)) by @alimd
+
 ## [7.6.1](https://github.com/Alwatr/nitrobase/compare/v7.6.0...v7.6.1) (2025-02-26)
 
 ### Bug Fixes
