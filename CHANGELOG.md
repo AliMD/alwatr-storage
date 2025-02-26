@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.6.1](https://github.com/Alwatr/nitrobase/compare/v7.6.0...v7.6.1) (2025-02-26)
+
+### Bug Fixes
+
+* **nginx:** update error code in _error.json for improved clarity ([75f8c00](https://github.com/Alwatr/nitrobase/commit/75f8c004ce5918608cb28409d4e9dc17d4952b14)) by @alimd
+
+### Performance Improvements
+
+* **nginx:** refactor authorization handling by extracting user ID and token from http_authorization ([eda6324](https://github.com/Alwatr/nitrobase/commit/eda6324c58f0b8b3ecfe4864a3feb682c835ff06)) by @alimd
+
+### Code Refactoring
+
+* **nginx:** update user authentication checks to use empty string for undefined tokens ([ecde440](https://github.com/Alwatr/nitrobase/commit/ecde4408013e8fe31619ca16c898245ce071cf4e)) by @alimd
+
 ## [7.6.0](https://github.com/Alwatr/nitrobase/compare/v7.5.9...v7.6.0) (2025-02-26)
 
 ### Features
