@@ -1,2 +1,0 @@
-# Extracting user location from the authUserId and userIdPrefix
-set $userLocation "$nitrobaseRegionPerUser/$userIdPrefix/$authUserId";
