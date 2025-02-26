@@ -1,9 +1,8 @@
 {
   "ok": false,
   "statusCode": <!--# echo var="status" default="500" -->,
-  "errorCode": "serve_error",
+  "errorCode": "nitrobase_server_error",
   "meta": {
-    "server": "AlwatrNitrobase",
-    "status": "<!--# echo var="status_text" default="Something goes wrong." -->"
+    "server": "AlwatrNitrobase"
   }
 }
