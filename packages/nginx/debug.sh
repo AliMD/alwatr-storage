@@ -39,6 +39,12 @@ function command_down() {
   remoteShellInPath "docker rm --volumes --force $containerName"
 }
 
+function command_rm() {
+  command_down
+  echoStep "Remove..."
+  remoteShellInPath "rm -rfv $deployPath"
+}
+
 function command_up() {
   command_down
   command_build
