@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.6.0](https://github.com/Alwatr/nitrobase/compare/v7.5.9...v7.6.0) (2025-02-26)
+
+### Miscellaneous Chores
+
+* rollback all versions ([9ff6c11](https://github.com/Alwatr/nitrobase/commit/9ff6c11ef3e44ea669a814da73ed39ddc2c8e971)) by @alimd
+
 ## [7.5.8](https://github.com/Alwatr/nitrobase/compare/v7.5.7...v7.5.8) (2025-02-18)
 
 ### Dependencies update
