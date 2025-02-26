@@ -1,11 +1,7 @@
 # extract $userIdPrefix from first 3 characters of `$authUserId`
-map $authUserId $userIdPrefixTmp {
+map $authUserId $userIdPrefix {
   default 0;
   # Micro optimization: if `$authUserId` is zero, don't bother with regex.
   0 0;
   "~^(.{3})" $1;
-}
-
-map $userIdPrefixTmp $userIdPrefix {
-  ~^(.*)$ $1;
 }
