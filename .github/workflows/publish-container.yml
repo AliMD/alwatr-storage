@@ -95,11 +95,6 @@ jobs:
             type=semver,enable=true,pattern={{major}}.{{minor}}
             type=semver,enable=true,pattern={{version}}
             type=ref,enable=true,event=branch
-          labels: |
-            org.opencontainers.image.title="alwatr/${{matrix.name}}"
-            org.opencontainers.image.vendor="Alwatr"
-            org.opencontainers.image.documentation="https://github.com/Alwatr/nitrobase"
-            org.opencontainers.image.authors="S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)"
 
       - name: 🚀 Build and export to docekr
         if: ${{ steps.file_change.outputs.container_folder != 'false' }}
@@ -129,6 +124,8 @@ jobs:
           file: ${{matrix.path}}/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+          build-args: |
+            BUILD_DATE=${{github.event.repository.updated_at}}
+            BUILD_REV=${{github.sha}}
