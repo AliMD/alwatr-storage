@@ -3,10 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [8.0.0](https://github.com/Alwatr/nitrobase/compare/v7.5.9...v8.0.0) (2025-02-24)
-
-**Note:** Version bump only for package @alwatr/nitrobase-user-management
-
 ## [7.5.8](https://github.com/Alwatr/nitrobase/compare/v7.5.7...v7.5.8) (2025-02-18)
 
 ### Dependencies update
