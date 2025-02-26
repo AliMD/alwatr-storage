@@ -1,2 +1,4 @@
 # remove nitrobaseApiPrefix from url
 rewrite ^$nitrobaseApiPrefix/(.*)$ /$1;
+
+set $debugInfo 50;

@@ -2,7 +2,10 @@
 # Nitrobase file location that can be accessed by anyone.
 
 location /$nitrobaseRegionPublic/ {
+  set $debugInfo 55;
+
   if ($authUserToken = "") {
+    set $debugInfo 551;
     # User not defined
     return 403;
     break;

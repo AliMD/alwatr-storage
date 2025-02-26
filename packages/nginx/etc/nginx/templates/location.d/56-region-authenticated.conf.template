@@ -2,13 +2,17 @@
 # Nitrobase file location that can be accessed by authenticated users.
 
 location /$nitrobaseRegionAuthenticated/ {
+  set $debugInfo 56;
+
   if ($authUserToken = "") {
     # User not defined
+    set $debugInfo 561;
     return 403;
     break;
   }
 
   if (!-f $document_root/$userLocation/.token/$authUserToken.asn) {
+    set $debugInfo 562;
     # Token file not found then user not authenticated
     return 403;
     break;
