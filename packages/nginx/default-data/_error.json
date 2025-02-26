@@ -4,6 +4,6 @@
   "errorCode": "nitrobase_server_error",
   "meta": {
     "server": "AlwatrNitrobase",
-    "debugInfo": <!--# echo var="debugInfo" default="0" -->
+    "debugInfo": "<!--# echo var="debugInfo" default="0" -->"
   }
 }

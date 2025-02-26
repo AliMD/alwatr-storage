@@ -2,8 +2,6 @@
 # Nitrobase file location specific to each owner id.
 
 location ~ ^/$nitrobaseRegionPerOwner/[A-z0-9_=-]+/[A-z0-9_=-]+/ {
-  set $debugInfo 59;
-
   if ($authUserToken = "") {
     # User not defined
     set $debugInfo 591;
@@ -11,5 +9,6 @@ location ~ ^/$nitrobaseRegionPerOwner/[A-z0-9_=-]+/[A-z0-9_=-]+/ {
     break;
   }
 
+  set $debugInfo 592;
   try_files $uri =404;
 }

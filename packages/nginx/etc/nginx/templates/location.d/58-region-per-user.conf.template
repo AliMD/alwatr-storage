@@ -2,8 +2,6 @@
 # Nitrobase file location specific to each user id. Can be accessed using the user token.
 
 location ~ ^/(?<requestLocation>$nitrobaseRegionPerUser/[A-z0-9_=-]+/[A-z0-9_=-]+)/ {
-  set $debugInfo 58;
-
   if ($authUserToken = "") {
     # User not defined
     set $debugInfo 581;
@@ -33,5 +31,6 @@ location ~ ^/(?<requestLocation>$nitrobaseRegionPerUser/[A-z0-9_=-]+/[A-z0-9_=-]
   }
 
   # User requested other user's files and is not a manager
+  set $debugInfo 584;
   return 403;
 }

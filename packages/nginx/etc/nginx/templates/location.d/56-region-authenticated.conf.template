@@ -2,8 +2,6 @@
 # Nitrobase file location that can be accessed by authenticated users.
 
 location /$nitrobaseRegionAuthenticated/ {
-  set $debugInfo 56;
-
   if ($authUserToken = "") {
     # User not defined
     set $debugInfo 561;
@@ -18,5 +16,6 @@ location /$nitrobaseRegionAuthenticated/ {
     break;
   }
 
+  set $debugInfo 562;
   try_files $uri =404;
 }

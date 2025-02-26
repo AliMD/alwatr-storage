@@ -2,8 +2,6 @@
 # Nitrobase file location that can be accessed by admin and managers only.
 
 location /$nitrobaseRegionManagers/ {
-  set $debugInfo 57;
-
   if ($authUserToken = "") {
     # User not defined
     set $debugInfo 571;
@@ -25,5 +23,6 @@ location /$nitrobaseRegionManagers/ {
     break;
   }
 
+  set $debugInfo 574;
   try_files $uri =404;
 }
