@@ -2,17 +2,20 @@
 # Nitrobase file location that can be accessed by admin and managers only.
 
 location /$nitrobaseRegionManagers/ {
-  if ($authUserToken = 0) {
-    return 403; # User not defined
+  if ($authUserToken = "") {
+    # User not defined
+    return 403;
     break;
   }
 
   if (!-f $document_root/$userLocation/.token/$authUserToken.asn) {
+    # Token file not found then user not authenticated
     return 403;
     break;
   }
 
   if (!-f $document_root/$userLocation/.auth/manager.asn) {
+    # Manager authentication file not found then user not a manager
     return 403;
     break;
   }

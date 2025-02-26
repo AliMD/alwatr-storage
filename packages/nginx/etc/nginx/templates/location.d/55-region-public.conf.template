@@ -2,8 +2,9 @@
 # Nitrobase file location that can be accessed by anyone.
 
 location /$nitrobaseRegionPublic/ {
-  if ($authUserToken = 0) {
-    return 403; # User not defined
+  if ($authUserToken = "") {
+    # User not defined
+    return 403;
     break;
   }
 

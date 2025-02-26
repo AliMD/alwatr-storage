@@ -3,12 +3,14 @@
 
 location ~ ^/(?<requestLocation>$nitrobaseRegionPerUser/[A-z0-9_=-]+/[A-z0-9_=-]+)/ {
 
-  if ($authUserToken = 0) {
-    return 403; # User not defined
+  if ($authUserToken = "") {
+    # User not defined
+    return 403;
     break;
   }
 
   if (!-f $document_root/$userLocation/.token/$authUserToken.asn) {
+    # Token file not found then user not authenticated
     return 403;
     break;
   }
@@ -16,12 +18,15 @@ location ~ ^/(?<requestLocation>$nitrobaseRegionPerUser/[A-z0-9_=-]+/[A-z0-9_=-]
   try_files $uri =404;
 
   if (-f $document_root/$userLocation/.auth/manager.asn) {
+    # Manager authentication file found then user is a manager and can access other user's files
     break;
   }
 
   if ($userLocation = $requestLocation) {
+    # User requested his own files
     break;
   }
 
+  # User requested other user's files and is not a manager
   return 403;
 }
