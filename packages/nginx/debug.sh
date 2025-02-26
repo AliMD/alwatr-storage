@@ -3,7 +3,6 @@
 set -Eeuo pipefail
 trap "echo '❌ Error'" ERR
 
-ALWATR_LIB=../../../oldwatr/cloud/classic/lib
 source $ALWATR_LIB/common.sh
 
 command="${1:-help}"
@@ -21,7 +20,7 @@ remotePath="$remoteHost:$deployPath"
 prefixUri=/api/s7
 
 function remoteShellInPath() {
-  remoteShell "cd $deployPath/; $@"
+  remoteShell "mkdir -p $deployPath; cd $deployPath/; $@"
 }
 
 function command_sync() {
@@ -75,14 +74,15 @@ function command_request() {
   # command_curl $uri '' "$@" || true
   # command_curl $uri 'Alwatr anonymous:anonymous' "$@" || true
   # command_curl $uri 'Alwatr Ual1md:Jafang' "$@" || true
-  # command_curl $uri 'Alwatr Ual1md1:T0k3n1' "$@" || true
+  command_curl $uri 'Alwatr Ual1md1:T0k3n1' "$@" || true
   # command_curl $uri 'Alwatr Ual1md2:T0k3n2' "$@" || true
-  command_curl $uri 'Alwatr Uadm1n:T0k3nA' "$@" || true
+  # command_curl $uri 'Alwatr Uadm1n:T0k3nA' "$@" || true
 }
 
 function command_test() {
   echoStep "Test..."
   command_request $prefixUri/debug-info-110 --verbose
+  return
 
   # command_request $prefixUri/u/Ual/Ual1md1/info.doc.asj -X OPTIONS -H "Origin: www.example.com" -H "Access-Control-Request-Method: GET" -H "Access-Control-Request-Headers: Content-Type"
 
